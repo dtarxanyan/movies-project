@@ -1,0 +1,24 @@
+.items {
+  height: 250px !important; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.items > p {
+   max-height: 50px;
+}
+
+.imgContainer {
+   margin-bottom: 50px;
+}
+
+.notFound {
+   margin: 0 auto;
+   width: 80%;
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 36px;
+   color: grey
+}
