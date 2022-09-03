@@ -1,10 +1,11 @@
 import {getMovies} from '../../api/movie.js'
 import getMoviesListHTML from '../../renders/getMoviesListHTML.js'
 
-const searchBtn = document.querySelector('#searchBtn')
 const searchInput = document.querySelector('#searchInput')
+const form = document.querySelector('#form')
 
-searchBtn.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
     const container = document.getElementById('movie-container');
     if(searchInput.value) {
        getMovies().then((movies) => {
@@ -21,6 +22,23 @@ searchBtn.addEventListener('click', () => {
         draw()
        }
 })
+// searchBtn.addEventListener('click', () => {
+    // const container = document.getElementById('movie-container');
+    // if(searchInput.value) {
+    //    getMovies().then((movies) => {
+    //    let searched = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
+
+    //    if(emptySearchResult(searched,container)) return 
+       
+    //    const mooviesHTML = getMoviesListHTML(searched)
+    //    container.innerHTML = ''
+    //    container.append(mooviesHTML)
+    //    }) 
+    // } else {
+    //     container.innerHTML = ''
+    //     draw()
+    //    }
+// })
 
  function draw() { 
     getMovies().then((movies) => {
