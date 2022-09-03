@@ -1,4 +1,4 @@
-const URL = '/movies-project/src/data/movies.json';
+const URL = '/src/data/movies.json';
 
 export const getMovies = async () => {
     const response = await fetch(URL);

@@ -4,6 +4,7 @@
   "description": "Movies Project",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/dtarxanyan/movies-project/issues"
   },
-  "homepage": "https://github.com/dtarxanyan/movies-project#readme"
+  "homepage": "https://github.com/dtarxanyan/movies-project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
 }
