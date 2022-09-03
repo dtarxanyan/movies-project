@@ -22,23 +22,6 @@ form.addEventListener('submit', (e) => {
         draw()
        }
 })
-// searchBtn.addEventListener('click', () => {
-    // const container = document.getElementById('movie-container');
-    // if(searchInput.value) {
-    //    getMovies().then((movies) => {
-    //    let searched = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
-
-    //    if(emptySearchResult(searched,container)) return 
-       
-    //    const mooviesHTML = getMoviesListHTML(searched)
-    //    container.innerHTML = ''
-    //    container.append(mooviesHTML)
-    //    }) 
-    // } else {
-    //     container.innerHTML = ''
-    //     draw()
-    //    }
-// })
 
  function draw() { 
     getMovies().then((movies) => {
