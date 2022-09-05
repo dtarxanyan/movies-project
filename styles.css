@@ -17,6 +17,9 @@ h5 {
    align-items: center;
    justify-content: center;
 }
+.card-img-top {
+   max-height: 381px !important;
+}
 .col {
    display: flex !important;
    justify-content: center !important;
