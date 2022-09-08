@@ -1,19 +1,39 @@
 {
+<<<<<<< HEAD
   "name": "movies-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+=======
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "Movies Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+>>>>>>> 09439ad4252c035f8aafdb8b6f606c68fddbacd9
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtarxanyan/movies-project.git"
   },
+<<<<<<< HEAD
+=======
+  "keywords": [],
+>>>>>>> 09439ad4252c035f8aafdb8b6f606c68fddbacd9
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dtarxanyan/movies-project/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/dtarxanyan/movies-project#readme"
+=======
+  "homepage": "https://github.com/dtarxanyan/movies-project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+>>>>>>> 09439ad4252c035f8aafdb8b6f606c68fddbacd9
 }
