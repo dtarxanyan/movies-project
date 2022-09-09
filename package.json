@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dtarxanyan/movies-project#readme",
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.19"
   }
 }

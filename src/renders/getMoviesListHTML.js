@@ -1,15 +1,26 @@
 import getSingleMovieHtml from './getSingleMovieHTML.js';
 
-const getMovieListHtml = (movies) => {
-    let html = '<div class="container text-center">';
-    html += '<div class="row">';
+const getMovieListHtml = (movies, separator) => {
+    let html = document.createElement('div');
+    html.classList.add('container');
+
+    let row = document.createElement('div');
+    row.classList.add('row');
 
     movies.forEach((movie, index) => {
-        html +=   `<div class="col">${getSingleMovieHtml(movie)}</div>`;
-    })
+        let div = document.createElement('div');
+        div.classList.add('col');
+        div.append(getSingleMovieHtml(movie));
+        row.append(div);
 
-    html += '</div>';
-    html += '</div>';
+        if (separator && row.childElementCount  % separator === 0) {
+            let temp = row.cloneNode(true);
+            row.innerHTML = '';
+            html.appendChild(temp);
+        } else if (!separator || movies.length - index < separator) {
+            html.appendChild(row);
+        }
+    })
 
     return html;
 }
