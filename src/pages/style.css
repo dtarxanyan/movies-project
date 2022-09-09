@@ -1,0 +1,38 @@
+#movieContainer {
+  background-color: hsl(240, 1%, 35%);
+}
+
+.moviesSection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.singleMovieBody a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.singleMovieHead {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.singleMovieHead img {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  transition: 0.8s;
+}
+
+.singleMovieHead img:hover {
+  scale: 1.03;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+}
