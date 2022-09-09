@@ -1,15 +1,29 @@
 import getSingleMovieHtml from './getSingleMovieHTML.js';
 
-const getMovieListHtml = (movies) => {
-    let html = '<div class="container text-center">';
-    html += '<div class="row">';
+const getMovieListHtml = (movies, displaySize) => {
+    let html = document.createElement('div');
+    html.classList.add('container');
+
+
+    let rowHTML = document.createElement('div');
+    rowHTML.classList.add('row');
+
 
     movies.forEach((movie, index) => {
-        html +=   `<div class="col">${getSingleMovieHtml(movie)}</div>`;
-    })
+       let newBlock = document.createElement('div');
+       newBlock.classList.add('col');
+       newBlock.append(getSingleMovieHtml(movie));
+       rowHTML.append(newBlock);
 
-    html += '</div>';
-    html += '</div>';
+       if(displaySize && rowHTML.childElementCount % displaySize === 0) {
+           let elem = rowHTML.cloneNode(true);
+           rowHTML.innerHTML = '';
+           html.appendChild(elem);
+
+       } else if (!displaySize || movies.length - index < displaySize) {
+           html.appendChild(rowHTML);
+       }
+    })
 
     return html;
 }
