@@ -5,3 +5,5 @@ export const getMovies = async () => {
     const responseObj = await response.json();
     return responseObj;
 }
+
+export default getMovies
