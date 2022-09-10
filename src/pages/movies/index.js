@@ -1,8 +1,21 @@
 import {getMovies} from '../../api/movie.js'
-import getMoviesListHTML from '../../renders/getMoviesListHTML.js'
+import renderData from  '../../renders/drawMovie.js'
 
 getMovies().then((movies) => {
-    const mooviesHTML = getMoviesListHTML(movies);
-    const container = document.getElementById('movie-container');
-    container.innerHTML = mooviesHTML;
+    return renderData(movies)
 })
+    .then(moviesData => {
+        const input = document.getElementById('search')
+        const searchButton = document.getElementById('search-button')
+        searchButton.addEventListener('click', () => {
+            const typed = input.value;
+            const movies = moviesData.filter(movie => movie.name.includes(typed));
+
+            if (!movies.length) {
+                alert('No search result, please try something else');
+                input.value = '';
+            } else {
+                renderData(movies, true);
+            }
+        })
+    })
