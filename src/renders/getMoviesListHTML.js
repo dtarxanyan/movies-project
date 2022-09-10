@@ -1,17 +1,21 @@
-import getSingleMovieHtml from './getSingleMovieHTML.js';
+import getSingleMovieHTML from './getSingleMovieHTML.js';
 
-const getMovieListHtml = (movies) => {
-    let html = '<div class="container text-center">';
-    html += '<div class="row">';
+const getMovieListHtml = (movies, onMovieClick) => {
+    const container = document.createElement('div')
+    container.classList.add('container','text-center')
+
+    const row = document.createElement('div')
+    row.classList.add('row')
 
     movies.forEach((movie, index) => {
-        html +=   `<div class="col">${getSingleMovieHtml(movie)}</div>`;
+        const movieContainer = document.createElement('div')
+        movieContainer.classList.add('col')
+        movieContainer.append(getSingleMovieHTML(movie, onMovieClick))
+        row.append(movieContainer)
+
     })
-
-    html += '</div>';
-    html += '</div>';
-
-    return html;
+    container.append(row)
+    return container;
 }
 
 export default getMovieListHtml;

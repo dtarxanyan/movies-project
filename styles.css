@@ -1,0 +1,37 @@
+.items {
+  height: 250px !important; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.items > p {
+   max-height: 50px;
+   padding-bottom: 80px;
+}
+
+.imgContainer {
+   margin-bottom: 50px;
+}
+h5 {
+   height: 96px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.card-img-top {
+   max-height: 381px !important;
+}
+.col {
+   display: flex !important;
+   justify-content: center !important;
+}
+.notFound {
+   margin: 0 auto;
+   width: 80%;
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 36px;
+   color: grey
+}
