@@ -6,6 +6,7 @@
 }
 .items > p {
    max-height: 50px;
+   padding-bottom: 80px;
 }
 
 .imgContainer {
