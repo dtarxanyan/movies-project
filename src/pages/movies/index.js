@@ -3,47 +3,60 @@ import getMoviesListHTML from '../../renders/getMoviesListHTML.js'
 
 const searchInput = document.querySelector('#searchInput')
 const form = document.querySelector('#form')
+form.addEventListener('submit', handleSearchSubmit);
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const container = document.getElementById('movie-container');
-    if(searchInput.value) {
-       getMovies().then((movies) => {
-       let searched = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
+getMovies().then((movies) => {
+    draw(movies);
+})
 
-       if(emptySearchResult(searched,container)) return 
-       
-       const mooviesHTML = getMoviesListHTML(searched)
-       container.innerHTML = ''
-       container.append(mooviesHTML)
-       }) 
+function collectClickStats(movie) {
+    let currentValue = localStorage.getItem('clickStats');
+
+    if(!currentValue) {
+        currentValue = {[movie.id]: 1};
     } else {
-        container.innerHTML = ''
-        draw()
-       }
-})
+        currentValue = JSON.parse(currentValue);
+        const prevCount = currentValue[movie.id] || 0
+        currentValue[movie.id] = prevCount + 1;
+    }
 
- function draw() { 
-    getMovies().then((movies) => {
-    const mooviesHTML = getMoviesListHTML(movies);
-    const container = document.getElementById('movie-container');
-    container.append(mooviesHTML)
-})
+    localStorage.setItem('clickStats', JSON.stringify(currentValue));
 }
 
-draw()
+function handleSearchSubmit(e) {
+    e.preventDefault()
+    const container = document.getElementById('movie-container')
+    getMovies().then((movies) => {
+        let filtered = movies;
 
+        if (searchInput.value) {
+            filtered = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
+        }
 
-function emptySearchResult(searched,container) {
-    if(!searched.length) {
-        const notFound = document.createElement('div')
-        notFound.innerText = 'Nothing found'
-        notFound.classList.add('notFound')
-        container.innerHTML= ''
-        container.append(notFound)
-        return 1
-       }
-    return 0
+        draw(filtered);
+    })
+}
+
+function draw(movies) {
+    if (!movies.length) {
+        showEmptyResultText();
+        return;
+    }
+
+    const mooviesHTML = getMoviesListHTML(movies, (movie) => {
+        collectClickStats(movie);
+    });
+
+    const container = document.getElementById('movie-container');
+    container.append(mooviesHTML)
+}
+
+function showEmptyResultText(container) {
+    const notFound = document.createElement('div')
+    notFound.innerText = 'Nothing found'
+    notFound.classList.add('notFound')
+    container.innerHTML = ''
+    container.append(notFound);
 }
 
 

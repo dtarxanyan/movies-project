@@ -1,6 +1,6 @@
 import getSingleMovieHTML from './getSingleMovieHTML.js';
 
-const getMovieListHtml = (movies) => {
+const getMovieListHtml = (movies, onMovieClick) => {
     const container = document.createElement('div')
     container.classList.add('container','text-center')
 
@@ -10,7 +10,7 @@ const getMovieListHtml = (movies) => {
     movies.forEach((movie, index) => {
         const movieContainer = document.createElement('div')
         movieContainer.classList.add('col')
-        movieContainer.append(getSingleMovieHTML(movie))
+        movieContainer.append(getSingleMovieHTML(movie, onMovieClick))
         row.append(movieContainer)
 
     })
