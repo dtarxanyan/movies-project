@@ -3,14 +3,14 @@ import  getMovies from '/src/api/movie.js'
 async function getMovieFromQuery() {
    let queryString = window.location.search
    let urlParams = new URLSearchParams(queryString)
-   let movieImgUrl = urlParams.get('id')
+   let movieId = urlParams.get('id')
    
    let data = await getMovies()
-   let currMovie = data.find(movie => movie.imageUrl === movieImgUrl)
+   let currMovie = data.find(movie => movie.id == movieId)
    return currMovie
 }
 
-      async  function drawPage() {
+async  function drawPage() {
    let currMovie = await getMovieFromQuery()
    let body = document.getElementsByTagName('body')
    let movieImg = document.createElement('img')

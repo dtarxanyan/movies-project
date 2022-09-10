@@ -8,7 +8,7 @@ const getSingleMovieHTML = (movie) => {
     img.setAttribute('src',movie.imageUrl)
     img.classList.add('card-img-top')
     img.addEventListener('click',() => {
-        window.open(`movies.html?id=${img.src}`,'_blank')
+        window.open(`movies.html?id=${movie.id}`,'_blank')
     })
     
     const items = document.createElement('div')
