@@ -1,13 +1,31 @@
 const getSingleMovieHTML = (movie) => {
-    return `
-    <div class="card" style="width: 18rem;">
-        <img src="${movie.imageUrl}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">${movie.name}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">${movie.genres}</a>
-        </div>
-    </div>`
+    const imgContainer = document.createElement('div')
+    imgContainer.classList.add('card','imgContainer')
+    imgContainer.setAttribute('style','width: 18rem;')
+
+    const img = document.createElement('img')
+    img.setAttribute('src',movie.imageUrl)
+    img.classList.add('card-img-top')
+    
+    const items = document.createElement('div')
+    items.classList.add('card-body','items')
+
+    const title = document.createElement('h5')
+    title.classList.add('card-title')
+    title.innerText = movie.name
+
+    const paragraph = document.createElement('p')
+    paragraph.classList.add('card-text')
+    paragraph.innerText = "Some quick example text to build on the card title and make up the bulk of the card's content."
+
+    let link = document.createElement('a')
+    link.setAttribute('href','#')
+    link.classList.add('btn','btn-primary')
+    link.innerText = movie.genres
+
+    items.append(title,paragraph,link)
+    imgContainer.append(img,items)
+    return imgContainer
 }
 
 export default getSingleMovieHTML;
