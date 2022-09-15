@@ -1,4 +1,4 @@
-import {getMovies} from '../../api/movie.js'
+import getMovies from '../../api/movie.js'
 import getMoviesListHTML from '../../renders/getMoviesListHTML.js'
 
 const searchInput = document.querySelector('#searchInput')
@@ -44,6 +44,7 @@ function draw(movies) {
     }
 
     const mooviesHTML = getMoviesListHTML(movies, (movie) => {
+        openSinglePage(movie)
         collectClickStats(movie);
     });
 
@@ -61,3 +62,12 @@ function showEmptyResultText(container) {
 
 
 
+function openSinglePage(movie) {
+    let views = getLocalStorageItem(movie)
+    window.open(`/src/pages/movies/movies.html?id=${movie.id}&views=${views}`, '_blank')
+}
+
+function getLocalStorageItem({id}) {
+   let stat =  JSON.parse(localStorage.getItem('clickStats'))
+   return stat[id]
+}
