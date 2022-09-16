@@ -23,16 +23,16 @@ function collectClickStats(movie) {
     localStorage.setItem('clickStats', JSON.stringify(currentValue));
 }
 
-function handleSearchSubmit(e) {
+function handleSearchSubmit(e) { debugger
     e.preventDefault()
     const container = document.getElementById('movie-container')
-    getMovies().then((movies) => {
+    getMovies().then((movies) => {debugger
         let filtered = movies;
 
-        if (searchInput.value) {
+        if (searchInput.value) {debugger
             filtered = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
         }
-
+        container.innerHTML = ''
         draw(filtered);
     })
 }
@@ -52,11 +52,12 @@ function draw(movies) {
     container.append(mooviesHTML)
 }
 
-function showEmptyResultText(container) {
+function showEmptyResultText() {debugger
+    const container = document.getElementById('movie-container')
     const notFound = document.createElement('div')
     notFound.innerText = 'Nothing found'
     notFound.classList.add('notFound')
-    container.innerHTML = ''
+    
     container.append(notFound);
 }
 
