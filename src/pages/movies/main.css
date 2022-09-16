@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 12%);
+}
+
+header {
+  height: 65px;
+  background-color: hsl(0, 0%, 7%);
+  display: flex;
+  padding: 5px;
+}
+
+header h2 {
+  color: white;
+  margin: 20px auto;
+  letter-spacing: 3px;
+  font-family: "Karla", sans-serif;
+}
+
+header img {
+  margin-left: 10px;
+}
+
+header p {
+  color: white;
+  margin-right: 50px;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+  line-height: 35px;
+  color: hsl(194, 78%, 55%);
+}
+
+.imgVideo {
+  width: 100%;
+  height: 450px;
+  margin-top: 26px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+main {
+  display: flex;
+}
+
+span {
+  color: white;
+  font-family: "Karla", sans-serif;
+}
+
+.videoMovie {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+}
+
+#movieContainer {
+  width: 800px;
+  height: 500px;
+  display: flex;
+}
+
+#movieFooter h3 {
+  color: hsl(194, 78%, 55%);
+  font-family: "Karla", sans-serif;
+  letter-spacing: 2px;
+}
+
+#movieFooter {
+  margin-left: 20px;
+}
