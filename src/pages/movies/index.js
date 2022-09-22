@@ -11,7 +11,7 @@ getMovies().then((movies) => {
 
 function collectClickStats(movie) {
     let currentValue = localStorage.getItem('clickStats');
-
+    console.log(currentValue)
     if(!currentValue) {
         currentValue = {[movie.id]: 1};
     } else {
@@ -23,13 +23,13 @@ function collectClickStats(movie) {
     localStorage.setItem('clickStats', JSON.stringify(currentValue));
 }
 
-function handleSearchSubmit(e) { debugger
+function handleSearchSubmit(e) { 
     e.preventDefault()
     const container = document.getElementById('movie-container')
-    getMovies().then((movies) => {debugger
+    getMovies().then((movies) => {
         let filtered = movies;
 
-        if (searchInput.value) {debugger
+        if (searchInput.value) {
             filtered = movies.filter(el => String(el.name).toLowerCase().includes(searchInput.value.toLowerCase()))
         }
         container.innerHTML = ''
@@ -44,15 +44,15 @@ function draw(movies) {
     }
 
     const mooviesHTML = getMoviesListHTML(movies, (movie) => {
-        openSinglePage(movie)
         collectClickStats(movie);
+        openSinglePage(movie)
     });
 
     const container = document.getElementById('movie-container');
     container.append(mooviesHTML)
 }
 
-function showEmptyResultText() {debugger
+function showEmptyResultText() {
     const container = document.getElementById('movie-container')
     const notFound = document.createElement('div')
     notFound.innerText = 'Nothing found'
