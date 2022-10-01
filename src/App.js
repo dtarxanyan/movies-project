@@ -10,13 +10,21 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/public/data/countries.json')
+    fetch('/data/countries.json')
       .then((res) => res.json())
       .then((res) => this.setState({ countries: res }));
   }
 
   render() {
-    return <Dropdown placeholder={10} value={100} />;
+    return (
+      <Dropdown
+        placeholder={'text..'}
+        options={this.state.countries}
+        label={'input'}
+        value={'Armenia'}
+        onChange={() => console.log('DROW-DOWN')}
+      />
+    );
   }
 }
 

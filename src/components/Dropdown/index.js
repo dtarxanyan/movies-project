@@ -8,9 +8,19 @@ class Dropdown extends Component {
   render() {
     return (
       <div>
-        <label htmlFor="input">My dropDown!</label>
-        <input type="text" list="data" />
-        <datalist id="data"></datalist>
+        <label htmlFor={this.props.label}>My dropDown!</label>
+        <input
+          placeholder={this.props.placeholder}
+          type="text"
+          defaultValue={this.props.value}
+          onChange={this.props.onChange}
+          list="data"
+        />
+        <datalist id="data">
+          {this.props.options.map((el) => {
+            return <option key={el.name}>{el.name}</option>;
+          })}
+        </datalist>
       </div>
     );
   }
