@@ -1,10 +1,10 @@
 import React from 'react';
-import UserList from "./components/UserList/UserList";
+import Sidebar from "./components/SideBar/Sidebar";
 
 class App extends React.Component {
     render() {
         return (
-            <UserList/>
+            <Sidebar />
         )
     }
 }
