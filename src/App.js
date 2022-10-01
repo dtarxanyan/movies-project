@@ -1,10 +1,16 @@
 import React from 'react';
+import Input from './components/Input/Input';
 import Sidebar from "./components/SideBar/Sidebar";
 
 class App extends React.Component {
     render() {
         return (
-            <Sidebar />
+            <>
+                <Sidebar />
+                <Input
+                   placeholder='write here'
+                 />
+            </>
         )
     }
 }
