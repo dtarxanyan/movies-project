@@ -8,14 +8,6 @@ export default class Input extends Component {
     };
   }
 
-  handleInput = () => {
-    this.setState({
-      value: "value was changed"
-    });
-  };
-
-  handleReset=()=>{}
-
   render() {
     const {placeholder, value, id, change} = this.props
     return (
