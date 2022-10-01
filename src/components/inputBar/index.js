@@ -6,13 +6,16 @@ class InputBar extends Component {
     }
 
     render() {
-        const {handelInput} = this.props;
+        const {onChange, value} = this.props;
         return (
             <div>
                 <label htmlFor="input" > Write your code</label>
                 <input
                     id={"input"}
-                    onChange={handelInput}
+                    value={value}
+                    onChange={ (event) => {
+                        onChange(event)
+                    }}
                     type="text"
                     placeholder={"text..."}
                 />

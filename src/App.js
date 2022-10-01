@@ -7,24 +7,25 @@ class App extends React.Component {
     constructor() {
         super();
         this.state={
-            inputValue: "",
+            value: "",
         }
     }
 
-    handelInput = (e) => {
+    onChange = (e) => {
         const value = e.target.value
-        this.setState({
-            inputValue: value,
-        })
+        this.setState({ value })
     }
 
     render() {
-        const {value} = this.state;
+        const {value, label, placeHolder} = this.state;
         return (
             <>
             <Sidebar />
                 <h2>{value}</h2>
-            <InputBar handelInput ={this.handelInput}/>
+            <InputBar
+                        value={value}
+                      onChange={this.onChange}
+            />
             </>
         )
     }
