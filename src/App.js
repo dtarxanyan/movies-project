@@ -10,11 +10,11 @@ class App extends React.Component {
             placeholder: '',
             input: '',
             label: '',
-            value: '',
+            value: 'Gago',
         }
     }
 
-    handleInput = (event) => {
+    onChange = (event) => {
         this.setState({
             input: event.target.value,
         })
@@ -22,12 +22,12 @@ class App extends React.Component {
 
     render() {
         const { placeholder, label, value } = this.state
-        const { handleInput } = this
+        const { onChange } = this
 
         return (
             <InputText
                 placeholder = { placeholder }
-                handleInput = { handleInput }
+                onChange = { onChange }
                 label = { label }
                 value = { value }
             />

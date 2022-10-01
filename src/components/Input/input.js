@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 
 class InputText extends Component {
     render() {
-        const { handleInput, placeholder, value, label } = this.props;
+        const { onChange, placeholder, value, label } = this.props;
 
         return (
             <div>
                 <label htmlFor="text">{ label }</label>
                 <input
-                    value = { value }
+                    defaultValue= { value }
                     id={'text'}
                     placeholder={ placeholder }
-                    onChange={ (event) => handleInput(event) }
+                    onChange={ (event) => onChange(event) }
                     type="text"/>
             </div>
         );
