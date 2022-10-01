@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./components/SideBar/Sidebar";
 import Input from "./components/Input/Input";
+import Select from "./components/Select/Select";
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
                 label = 'Test Label'
                 value = 'Test Value'
                 placeholder = 'Test Placeholder'
-                callback = {() => console.log(1)}></Input>
+                callback = {(value) => {console.log(value)}}></Input>
         <Sidebar />
       </>
     );

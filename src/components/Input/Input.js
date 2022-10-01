@@ -11,7 +11,7 @@ export default class Input extends Component {
                type='text' 
                placeholder= {placeholder ? placeholder : ''}
                defaultValue= {value} 
-               onChange = {() => callback()}
+               onChange = {(e) => callback(e.target.value)}
                ></input>
       </div>
     )
