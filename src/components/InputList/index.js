@@ -8,8 +8,8 @@ class Input extends React.Component {
         }
     }
 
-    inputValue=(e)=>{
-        const input =e.target.value
+    inputOnChangeValue=(e)=>{
+        const input =e.target.value;
         this.setState({
             inputValue: input
         })
@@ -22,10 +22,11 @@ class Input extends React.Component {
             <form>
                 <label htmlFor="text">Input
                     <input
-                        onChange={ this.inputValue }
+                        onChange={ this.inputOnChangeValue }
                         type="text"
                         id="text"
                         placeholder="inputText"
+                        inputvalue = { this.state.inputValue }
                     />
                 </label>
             </form>
