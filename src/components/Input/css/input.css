@@ -1,0 +1,15 @@
+.inputContainer {
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+}
+label {
+   margin-right: 10px;
+}
+input {
+   padding-top: 5px;
+}
+input {border:1px solid black;outline:0;}
+input:focus {outline:none!important;}
