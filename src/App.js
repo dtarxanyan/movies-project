@@ -1,6 +1,6 @@
 import React from "react";
 import TextInput from "./components/TextInput/TextInput";
-import Select from "./components/Select/Select";
+import Dropdown from "./components/Dropdown/Dropdown";
 
 class App extends React.Component {
   constructor() {
@@ -18,14 +18,14 @@ class App extends React.Component {
   render() {
     return (
       this.state.options.length && (
-        <Select
+        <Dropdown
           options={this.state.options}
           label="Test Label"
           value="Test Value"
           onChange={(value) => {
             console.log(value);
           }}
-        ></Select>
+        ></Dropdown>
       )
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./css/select.css";
+import "./css/dropdown.css";
 
 export default class Select extends Component {
   constructor(props) {
