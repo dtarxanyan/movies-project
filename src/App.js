@@ -1,19 +1,23 @@
 import React from 'react';
-import TextInput from "./components/TextInput/TextInput";
+import Dropdown from './components/Dropdown';
 
 class App extends React.Component {
-    render() {
-        return (
-            <TextInput
-                label={'First Name'}
-                placeholder={'Enter Your Name'}
-                value={'Initial Value'}
-                onChange={(newValue) => {
-                    console.log(newValue)
-                }}
-            />
-        )
-    }
+  constructor() {
+    super();
+    this.state = {
+      countries: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('/public/data/countries.json')
+      .then((res) => res.json())
+      .then((res) => this.setState({ countries: res }));
+  }
+
+  render() {
+    return <Dropdown placeholder={10} value={100} />;
+  }
 }
 
 export default App;
