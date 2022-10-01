@@ -12,7 +12,6 @@ class Input extends Component {
     }
 
     updatValue(e) {
-        // console.log()
       this.setState({
            vale:e.target.value
 
