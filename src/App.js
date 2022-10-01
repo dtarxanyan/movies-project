@@ -4,7 +4,7 @@ import Input from './components/InputText/Input';
 
 class App extends React.Component {
   render() {
-    return <Input />;
+    return <Input value={10} />;
   }
 }
 
