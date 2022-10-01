@@ -27,7 +27,7 @@ class DropDownInput extends Component {
                 <label htmlFor="country">{ label }</label>
 
                 <select name="country" id="country">
-                    {this.state.countries.map(option => <option selected={value} key={option.id} value="volvo">{option.name}</option>)}
+                    {this.state.countries.map(option => <option selected={value} key={option.id}>{option.name}</option>)}
                 </select>
 
             </div>
