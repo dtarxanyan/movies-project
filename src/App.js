@@ -1,19 +1,10 @@
-import React from 'react';
-import TextInput from "./components/TextInput/TextInput";
+import React from "react";
+import DropDown from "./components/dropDown";
 
 class App extends React.Component {
-    render() {
-        return (
-            <TextInput
-                label={'First Name'}
-                placeholder={'Enter Your Name'}
-                value={'Initial Value'}
-                onChange={(newValue) => {
-                    console.log(newValue)
-                }}
-            />
-        )
-    }
+  render() {
+    return <DropDown label="Country" value={{ id: 1, name: "USA" }} />;
+  }
 }
 
 export default App;
