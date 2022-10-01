@@ -1,10 +1,20 @@
-import React from 'react';
+import React,  { Component }from 'react';
 
 class Input extends React.Component {
-
-    handleRemoveClick = (e) => {
-        e.target.value
+    constructor() {
+        super();
+        this.state={
+            inputValue:" "
+        }
     }
+
+    inputValue=(e)=>{
+        const input =e.target.value
+        this.setState({
+            inputValue: input
+        })
+    }
+
 
     render() {
 
@@ -12,11 +22,12 @@ class Input extends React.Component {
             <form>
                 <label htmlFor="text">Input
                     <input
+                        onChange={ this.inputValue }
                         type="text"
                         id="text"
-                        onChange={this.handleRemoveClick}
+                        placeholder="inputText"
                     />
-                </label>\
+                </label>
             </form>
 
         )
