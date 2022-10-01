@@ -1,10 +1,22 @@
 import React from 'react';
 import UserList from "./components/UserList/UserList";
+import TextInput from './components/TextInput'
 
 class App extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            text : ''
+        }
+    }
+    changeInput(e){
+        this.setState({
+            text : e.target.value
+        })
+    }
     render() {
         return (
-            <UserList/>
+            <TextInput onChange = {this.changeInput}/>
         )
     }
 }
