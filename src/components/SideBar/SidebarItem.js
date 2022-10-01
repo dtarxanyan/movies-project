@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class SidebarItem extends React.Component {
     render() {
         const {icon, text} = this.props;
