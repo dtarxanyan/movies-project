@@ -7,7 +7,10 @@ class App extends React.Component {
         super(props);
 
         this.state = {
+            placeholder: '',
             input: '',
+            label: '',
+            value: '',
         }
     }
 
@@ -18,8 +21,16 @@ class App extends React.Component {
     }
 
     render() {
+        const { placeholder, label, value } = this.state
+        const { handleInput } = this
+
         return (
-            <InputText handleInput = { this.handleInput } />
+            <InputText
+                placeholder = { placeholder }
+                handleInput = { handleInput }
+                label = { label }
+                value = { value }
+            />
             // <Sidebar />
         )
     }
