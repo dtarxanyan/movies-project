@@ -21,7 +21,6 @@ class App extends React.Component {
         <Select
           options={this.state.options}
           label="Test Label"
-          placeholder="Test Placeholder"
           value="Test Value"
           onChange={(value) => {
             console.log(value);
