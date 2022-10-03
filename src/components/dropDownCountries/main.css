@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(66, 132, 237);
+  user-select: none;
+}
+
+.wrapper {
+  width: 380px;
+  margin: 50px auto;
+}
+
+.selectBtn {
+  height: 65px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 7px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.selectBtn > div {
+  margin-top: 10px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 7px;
+  display: block;
+}
+
+.hiddenContent {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 7px;
+  display: none;
+}
+
+.content .options > li {
+  list-style: none;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 13px;
+  font-size: 18px;
+}
+.content .options {
+  margin-left: -43px;
+  max-height: 203px;
+  overflow-y: auto;
+}
+
+.content .options > li:hover {
+  background-color: #f2f2f2;
+}
