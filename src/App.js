@@ -22,8 +22,8 @@ class App extends React.Component {
           options={this.state.options}
           label="Test Label"
           value="Test Value"
-          onChange={(value) => {
-            console.log(value);
+          onChange={(e) => {
+            console.log(e.target.value);
           }}
         ></Dropdown>
       )

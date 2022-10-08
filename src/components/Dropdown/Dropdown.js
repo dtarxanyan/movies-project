@@ -15,17 +15,14 @@ export default class Select extends Component {
     this.props.onChange(value);
   };
   render() {
-    const { label, value, options } = this.props;
+    const { label, value, options, onChange } = this.props;
     return (
       <div className="selectContainer">
         <label htmlFor="select">{label}</label>
         <select
-          value={this.state.value}
           name="select"
           id="select"
-          onChange={(e) => {
-            this.handleChange(e);
-          }}
+          onChange={onChange}
         >
           <option>{value}</option>
           {options.map((el) => {
