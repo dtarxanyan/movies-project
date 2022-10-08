@@ -1,0 +1,14 @@
+.selectContainer {
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+     display: flex;
+     justify-content: flex-start;
+ }
+ label {
+    margin-right: 10px;
+ }
+ select {
+    margin-top: 3px;
+    width: 15%;
+ }
