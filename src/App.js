@@ -1,17 +1,10 @@
 import React from 'react';
-import TextInput from "./components/TextInput/TextInput";
+import CreateTable from "./components/CreateTable/CreateTable";
 
 class App extends React.Component {
     render() {
         return (
-            <TextInput
-                label={'First Name'}
-                placeholder={'Enter Your Name'}
-                value={'Initial Value'}
-                onChange={(newValue) => {
-                    console.log(newValue)
-                }}
-            />
+           <CreateTable />
         )
     }
 }
