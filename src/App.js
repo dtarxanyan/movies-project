@@ -1,7 +1,7 @@
 import React from 'react';
 import TextInput from "./components/TextInput/TextInput";
 import DropDownInput from "./components/DropDown/DropDown";
-import TableRow from "./components/Table/Table";
+import Table from "./components/Table/Table";
 
 class App extends React.Component {
     constructor(props) {
@@ -47,21 +47,11 @@ class App extends React.Component {
                     options = { this.state.countries }
                 />
 
-                <table>
-                    <tr>
-                        <th>N</th>
-                        <th>Name</th>
-                        <th>User type</th>
-                        <th>Action</th>
-                    </tr>
-                        {
-                            this.state.users.map(user =>
-                                <TableRow onDelete = { this.onDelete } rows = { user }/>
-                            )
-                        }
+                <Table onDelete = {this.onDelete} rows = { this.state.users }/>
 
-                </table>
             </div>
+
+
         )
     }
 }
