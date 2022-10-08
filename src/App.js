@@ -1,19 +1,40 @@
 import React from 'react';
-import TextInput from "./components/TextInput/TextInput";
+import './App.css';
+import Table from './components/Table';
 
 class App extends React.Component {
-    render() {
-        return (
-            <TextInput
-                label={'First Name'}
-                placeholder={'Enter Your Name'}
-                value={'Initial Value'}
-                onChange={(newValue) => {
-                    console.log(newValue)
-                }}
-            />
-        )
-    }
+  constructor() {
+    super();
+    this.state = {
+      users: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('/data/users.json')
+      .then((res) => res.json())
+      .then((users) =>
+        this.setState({
+          users: users,
+        }),
+      );
+  }
+
+  removeUser = (name) => {
+    this.setState({
+      users: this.state.users.filter((user) => {
+        return user.name !== name;
+      }),
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Table users={this.state.users} onclick={this.removeUser} />
+      </div>
+    );
+  }
 }
 
 export default App;
