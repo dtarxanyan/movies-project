@@ -1,32 +1,24 @@
-import { getValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 
 class Dropdown extends React.Component {
-  constructor() {
-    super();
-  }
+    render() {
+        const {options, value, label, onChange} = this.props;
 
-  render() {
-    return (
-      <>
-        <label htmlFor="names">{this.props.label}</label>
-
-        <select id="names" onChange={this.props.onChange}>
-          {this.props.options.map((option) => {
-            if (option.id === this.props.value.id) {
-              return (
-                <option selected key={option.id}>
-                  {option.firstName}
-                </option>
-              );
-            } else {
-              return <option key={option.id}>{option.firstName}</option>;
-            }
-          })}
-        </select>
-      </>
-    );
-  }
+        return (
+            <>
+                <label htmlFor="names">{label}</label>
+                <select
+                    id="names"
+                    onChange={onChange}
+                    value={value}
+                >
+                    {options.map((option) => {
+                        return <option key={option.value} value={option.value}>{option.name}</option>;
+                    })}
+                </select>
+            </>
+        );
+    }
 }
 
 export default Dropdown;

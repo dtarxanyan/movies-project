@@ -1,11 +1,13 @@
 import React from 'react';
-import TableContainer from './components/Table/TableContainer';
-import DropdownContainer from './components/Dropdown/DropdownContainer';
+import CountryRegionDropdowns from "./components/CountryRegionDropdowns/CountryRegionDropdowns";
+
 
 class App extends React.Component {
-  render() {
-    return <DropdownContainer />;
-  }
+    render() {
+        return (
+            <CountryRegionDropdowns/>
+        )
+    }
 }
 
 export default App;
