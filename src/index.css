@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Box{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+ margin: 0 auto;
+}
