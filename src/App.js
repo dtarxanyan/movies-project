@@ -4,18 +4,17 @@ import DropdownContainer from './components/Dropdown/DropdownContainer';
 import FrameTest from "./components/frameTest";
 
 
-
 class App extends React.Component {
-  render() {
-    return (
+    render() {
+        return (
 
-          <FrameTest>
+            <FrameTest>
                 <p>hello everyone </p>
-          </FrameTest>
+            </FrameTest>
 
 
-    )
-  }
+        )
+    }
 }
 
 export default App;
