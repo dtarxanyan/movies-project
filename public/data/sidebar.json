@@ -2,36 +2,43 @@
   {
     "id": 1,
     "name": "calendar",
-    "url": "https://cdn-icons-png.flaticon.com/512/747/747310.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/747/747310.png",
+    "isShown": "true"
   },
   {
     "id": 2,
     "name": "chat",
-    "url": "https://cdn-icons-png.flaticon.com/512/2076/2076218.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/2076/2076218.png",
+    "isShown": "true"
   },
   {
     "id": 3,
     "name": "email",
-    "url": "https://cdn-icons-png.flaticon.com/512/646/646094.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/646/646094.png",
+    "isShown": "true"
   },
   {
     "id": 4,
     "name": "social",
-    "url": "https://cdn-icons-png.flaticon.com/512/2065/2065064.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/2065/2065064.png",
+    "isShown": "true"
   },
   {
     "id": 5,
     "name": "phone",
-    "url": "https://cdn-icons-png.flaticon.com/512/159/159832.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/159/159832.png",
+    "isShown": "true"
   },
   {
     "id": 6,
     "name": "home",
-    "url": "https://cdn-icons-png.flaticon.com/512/1946/1946488.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
+    "isShown": "true"
   },
   {
     "id": 7,
     "name": "work",
-    "url": "https://cdn-icons-png.flaticon.com/512/1063/1063376.png"
+    "url": "https://cdn-icons-png.flaticon.com/512/1063/1063376.png",
+    "isShown": "true"
   }
 ]
