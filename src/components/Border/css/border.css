@@ -1,5 +1,5 @@
 .bordered {
-    border: 1px dashed red;
+    border: 3px inset red;
     height: 200px;
     width: 50%;
     margin: 0 auto;
