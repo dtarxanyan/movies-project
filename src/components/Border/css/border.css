@@ -1,0 +1,7 @@
+.bordered {
+    border: 1px dashed red;
+    height: 200px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
