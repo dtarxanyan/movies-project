@@ -1,9 +1,10 @@
 import React from 'react';
+import Frame from './components/Frame/Frame';
 import TextInput from "./components/TextInput/TextInput";
 
 class App extends React.Component {
     render() {
-        return (
+        return (<>
             <TextInput
                 label={'First Name'}
                 placeholder={'Enter Your Name'}
@@ -12,7 +13,10 @@ class App extends React.Component {
                     console.log(newValue)
                 }}
             />
-        )
+            <Frame>
+                <p>chaild</p>
+            </ Frame>
+            </> )
     }
 }
 
