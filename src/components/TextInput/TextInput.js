@@ -1,4 +1,5 @@
 import React from 'react';
+import DropDownInput from "../dropDownInput";
 
 class TextInput extends React.Component {
     constructor(props) {
@@ -21,13 +22,9 @@ class TextInput extends React.Component {
             <div className={'text-input'}>
                 <label htmlFor={'text-input'}>{label}</label>
                 <br/>
-                <input
-                    id={'text-input'}
-                    type={'text'}
-                    value={this.state.value}
-                    placeholder={placeholder}
-                    onChange={this.handleChange}
-                />
+                <br/>
+
+                <DropDownInput/>
             </div>
         )
     }

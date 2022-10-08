@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "age": 23,
+    "url": "https://cdn-icons-png.flaticon.com/512/747/747310.png"
+  },
+  {
+    "id": 2,
+    "name": "Mary",
+    "age": 45,
+    "url": "https://cdn-icons-png.flaticon.com/512/2076/2076218.png"
+  },
+  {
+    "id": 3,
+    "name": "Anna",
+    "age": 32,
+    "url": "https://cdn-icons-png.flaticon.com/512/646/646094.png"
+  },
+  {
+    "id": 4,
+    "name": "Mari",
+    "age": 28,
+    "url": "https://cdn-icons-png.flaticon.com/512/2065/2065064.png"
+  },
+  {
+    "id": 5,
+    "name": "Artur",
+    "age": 36,
+    "url": "https://cdn-icons-png.flaticon.com/512/159/159832.png"
+  },
+  {
+    "id": 6,
+    "name": "home",
+    "age": 31,
+    "url": "https://cdn-icons-png.flaticon.com/512/1946/1946488.png"
+  },
+  {
+    "id": 7,
+    "name": "work",
+    "age": 28,
+    "url": "https://cdn-icons-png.flaticon.com/512/1063/1063376.png"
+  }
+]
