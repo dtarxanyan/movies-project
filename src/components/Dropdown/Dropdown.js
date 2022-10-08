@@ -9,11 +9,7 @@ export default class Select extends Component {
     };
   }
 
-  handleChange = (e) => {
-    const value = e.target.value;
-    this.setState({ value });
-    this.props.onChange(value);
-  };
+
   render() {
     const { label, value, options, onChange } = this.props;
     return (
@@ -24,7 +20,7 @@ export default class Select extends Component {
           id="select"
           onChange={onChange}
         >
-          <option>{value}</option>
+          <option value={value}>{value}</option>
           {options.map((el) => {
             return (
               <option key={el.id} value={el.name}>
