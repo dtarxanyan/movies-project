@@ -17,6 +17,10 @@ class App extends React.Component {
             .then(countries => this.setState({ countries }))
     }
 
+    onChange = () => {
+        console.log('barev')
+    }
+
     render() {
         return (
             // <TableContainer/>
@@ -24,6 +28,7 @@ class App extends React.Component {
                 label = {'Country'}
                 value = { {id: 2, name: 'Germany'} }
                 options = { this.state.countries }
+                onChange = { this.onChange }
             />
         )
     }
