@@ -1,10 +1,10 @@
 import React from 'react';
-import TableContainer from "./components/Table/TableContainer";
+import Dropdown from "./ Dropdown/Dropdown";
 
 class App extends React.Component {
     render() {
         return (
-            <TableContainer/>
+        <Dropdown/>
         )
     }
 }
