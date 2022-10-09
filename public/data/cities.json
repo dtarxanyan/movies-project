@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Moscow"
+  },
+  {
+    "id": 1,
+    "name": "Saint Petersburg"
+  },
+  {
+    "id": 2,
+    "name": "Vegas"
+  },
+  {
+    "id": 2,
+    "name": "Miami"
+  },
+  {
+    "id": 3,
+    "name": "Gyumri"
+  },
+  {
+    "id": 3,
+    "name": "Yerevan"
+  }
+]
