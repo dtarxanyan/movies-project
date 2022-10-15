@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class FormContainer extends Component {
     render() {
         return (
-            <div>
+            <div className={"formContainer"}>
                 <h3>Sign Up</h3>
                 <p>Its quick and easy</p>
                 <form action="">
@@ -33,7 +33,7 @@ class FormContainer extends Component {
 
                     </div>
                     <br/>
-                    <div>
+                    <div className={"form-radio"}>
                         <label htmlFor="female">Female</label>
                         <input type="radio" name={"check"} id={"female"}/>
                         <label htmlFor="male">Male</label>

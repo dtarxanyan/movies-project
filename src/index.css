@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.formContainer input {
+  margin: 5px;
+}
+
+.formContainer select{
+  margin: 5px;
+}
+
+.formContainer p {
+  margin: 10px;
+}
+.form-radio {
+  margin: 5px;
+}
