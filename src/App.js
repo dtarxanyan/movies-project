@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return <SignUp 
       defaultValues={{
-        firstName:'Alice',
+        firstName:'Alicee',
         lastName: 'Wonderland',
         mobile: '116',
         password: '365',
