@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "countryId":1,
+      "name": "Lori"
+    },
+    {
+        "id": 2,
+        "countryId":1,
+        "name": "Shirak"
+      },
+      {
+        "id": 3,
+        "countryId":1,
+        "name": "Ararat"
+      },
+      {
+        "id": 4,
+        "countryId":1,
+        "name": "Syunik"
+      },
+      {
+        "id": 5,
+        "countryId":2,
+        "name": "Texas"
+      },{
+        "id": 6,
+        "countryId":2,
+        "name": "Alabama"
+      },{
+        "id": 7,
+        "countryId":2,
+        "name": "California"
+      },{
+        "id": 8,
+        "countryId":2,
+        "name": "New York"
+      }
+  ]
