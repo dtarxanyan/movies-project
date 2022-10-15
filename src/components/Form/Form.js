@@ -13,6 +13,8 @@ class Form extends React.Component {
         <br />
         <br />
         <input type="number" placeholder="Mobile number or email" />
+        <br />
+        <br />
         <input type="password" placeholder="new password" />
         <br />
         <br />
@@ -71,18 +73,19 @@ class Form extends React.Component {
           <option value="2022">2019</option>
           <option value="2022">2018</option>
         </select>
-
+        <br />
+        <br />
         <label htmlFor="Female">
-          <h3>Female</h3>
-          <input name="gender" type="radio" />
+          <span>Female</span>
+          <input id="Female" name="gender" type="radio" />
         </label>
-        <label htmlFor="Female">
-          <h3>Male</h3>
-          <input name="gender" type="radio" />
+        <label htmlFor="Male">
+          <span>Male</span>
+          <input id="Male" name="gender" type="radio" />
         </label>
-        <label htmlFor="Female">
-          <h3>Other</h3>
-          <input name="gender" type="radio" />
+        <label htmlFor="Other">
+          <span>Other</span>
+          <input id="Other" name="gender" type="radio" />
         </label>
         <br />
         <select>
@@ -93,6 +96,7 @@ class Form extends React.Component {
         <br />
         <br />
         <input type="text" placeholder="Gender" />
+        <button type="submit">Sign up</button>
       </form>
     );
   }
