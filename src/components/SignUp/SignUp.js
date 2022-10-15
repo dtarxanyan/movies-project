@@ -9,14 +9,14 @@ class SignUp extends Component {
         super(props);
 
          const { defaultValues}  = this.props
-        this.state = {
-                values:{
-                    firstName : '',
-                    lastName: '',
-                    password : '',
-                    email : '',
-                    ...defaultValues,
-                }
+                this.state = {
+                        values:{
+                            firstName : '',
+                            lastName: '',
+                            password : '',
+                            email : '',
+                            ...defaultValues,
+                        }
 
         }
     }
@@ -41,7 +41,6 @@ class SignUp extends Component {
 
         return (
             <div>
-
                 <form action="">
                     <div className={'firstname-lastname'}>
                         <TextInput onChange={(e)=>this.handleInput(firstName,e)}  value={ firstName } placeholder={'First name'}/>
