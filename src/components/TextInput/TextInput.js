@@ -8,9 +8,12 @@ class TextInput extends React.Component {
     };
   }
 
-  componentDidUpdate() {
-    this.props.onChange(this.state.valueInput);
-  }
+  handleChange = (val) => {
+    this.setState({
+      valueInput: val,
+    });
+    this.props.onChange(val);
+  };
 
   render() {
     const { label, placeholder } = this.props;
@@ -24,7 +27,7 @@ class TextInput extends React.Component {
           type={"text"}
           value={this.state.valueInput}
           placeholder={placeholder}
-          onChange={(e) => this.setState({ valueInput: e.target.value })}
+          onChange={(e) => this.handleChange(e.target.value)}
         />
       </div>
     );
