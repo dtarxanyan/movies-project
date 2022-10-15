@@ -14,13 +14,25 @@ class FormContainer extends Component {
                     <br/>
                     <input type="password" placeholder={"New password"}/>
                     <br/>
-                    <p>Birthday</p>
+                    <label htmlFor="birthday"></label>
                     <div>
+                        <select name="" id="birthday">
+                            <option value="oct">Oct</option>
+                            <option value="oct">Sep</option>
+                        </select>
 
-                            <select name="Oct" id=""></select>
+                        <select name="" id="birthday">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
 
+                        <select name="" id="birthday">
+                            <option value="">2020</option>
+                            <option value="">2021</option>
+                        </select>
 
                     </div>
+                    <br/>
                     <div>
                         <label htmlFor="female">Female</label>
                         <input type="radio" name={"check"} id={"female"}/>
@@ -29,7 +41,7 @@ class FormContainer extends Component {
                         <label htmlFor="Custom">Custom</label>
                         <input type="radio" name={"check"} id={"Custom"}/>
                     </div>
-<br/>
+                    <br/>
                     <select name="Select your pronun" id="">
                         <option value="">She: "Wish her a happy birthday"!</option>
                         <option value="">He: "Wish him a happy birthday"!</option>
