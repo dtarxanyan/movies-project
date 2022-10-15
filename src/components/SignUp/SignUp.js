@@ -30,7 +30,7 @@ class SignUp extends Component {
 
 
     onSubmit = ()=>{
-        this.props.onSubmit(this.state.values)
+        this.props.handleSubmit(this.state.values)
     }
 
 
