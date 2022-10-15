@@ -43,11 +43,11 @@ export default class Form extends Component {
 
               <div>
                 <label htmlFor="Female">Female</label>
-                <input type="radio" id="Female" name="Female"></input>
+                <input type="radio" id="Female" name="gender"></input>
                 <label htmlFor="Male">Male</label>
-                <input type="radio" id="Male" name="Male"></input>
+                <input type="radio" id="Male" name="gender"></input>
                 <label htmlFor="Custom">Custom</label>
-                <input type="radio" id="Custom" name="Custom"></input>
+                <input type="radio" id="Custom" name="gender"></input>
               </div>
               <div>
                 <select>
