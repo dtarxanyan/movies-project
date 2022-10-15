@@ -6,16 +6,26 @@ import TextInput from '../TextInput/TextInput'
 class SignUp extends Component {
     constructor(props) {
         super(props)
-        const { defaultValue} = props
+        const { defaultValue } = props
         this.state = {
             values: {
                 ...defaultValue
             }
         }
     }
-    onSubmit(e) {
-        console.log(e.value);
+
+    onSubmit = () => {
+        this.props.onSubmit(this.state.values)
     }
+    handleonChengInput = (name, value) => {
+        this.setState({
+            values: {
+                ...this.state.values,
+                [name]: value
+            }
+        })
+    }
+
 
 
 
@@ -25,19 +35,19 @@ class SignUp extends Component {
             <div>
                 <form action=""  >
                     <div className={'firstname-lastname'}>
-                        <TextInput value={fristName} placeholder={'First name'} />
-                        <TextInput value={lastName} placeholder={'Last name'} />
+                        <TextInput onChange={(e) => this.handleonChengInput('fristName', e)} value={fristName} placeholder={'First name'} />
+                        <TextInput onChange={(e) => this.handleonChengInput('lastName', e)} value={lastName} placeholder={'Last name'} />
                     </div>
                     <br />
-                    <TextInput value={number} placeholder={'Mobile Number or email'} />
-                    <TextInput value={password} placeholder={'New password'} />
-                    
+                    <TextInput onChange={(e) => this.handleonChengInput('number', e)} value={number} placeholder={'Mobile Number or email'} type={'number'} />
+                    <TextInput onChange={(e) => this.handleonChengInput('password', e)} value={password} placeholder={'New password'} />
+
                     <br />
                     <BirthdayInput />
                     <br />
                     <GenderInput />
                     <br />
-                    <button onSubmit={(value)=> this.props.onSubmit(console.log(value))}  type={'submit'}>Sign Up</button>
+                    <button onClick={this.onSubmit} type={'button'}>Sign Up</button>
                 </form>
             </div>
         );

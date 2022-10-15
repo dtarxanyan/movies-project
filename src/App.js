@@ -15,9 +15,9 @@ class App extends React.Component {
         lastName: 'Hovakimyan',
         number: '1111111',
         password: '555555',
-        onSubmit: this.handleSubmit
       }
       }
+      onSubmit={this.handleSubmit}
     />;
   }
 }
