@@ -7,10 +7,10 @@ class SignUp extends Component {
 
     constructor(props) {
         super(props);
-        
+
          const { defaultValues}  = this.props
         this.state = {
-                value:{
+                values:{
                     firstName : '',
                     lastName: '',
                     password : '',
@@ -20,40 +20,36 @@ class SignUp extends Component {
 
         }
     }
-    handleInput(name,value){
+    handleInput = (name,value)=> {
         this.setState({value:{
-            ...this.state.value,
+            ...this.state.values,
                 [name]:value
         }})
     }
 
-    // handleChange = (e) => {
-    //     const value = e.target.value;
-    //     this.setState({value});
-    //     this.props.onChange(value);
-    // }
+    
 
-    onSubmit =()=>{
-        this.props.onSubmit(this.state.value)
+    onSubmit = () =>{
+        this.props.onSubmit(this.state.values)
     }
 
 
 
 
     render() {
-        const {firstName,lastName,password,email,handleInput} = this.state
+        const {firstName,lastName,password,email} = this.state.values
 
         return (
             <div>
 
                 <form action="">
                     <div className={'firstname-lastname'}>
-                        <TextInput onChange={(e)=>handleInput(e.target.value)}  value={ firstName } placeholder={'First name'}/>
-                        <TextInput  value = { lastName } placeholder={'Last name'}/>
+                        <TextInput onChange={(e)=>this.handleInput(firstName,e)}  value={ firstName } placeholder={'First name'}/>
+                        <TextInput  onChange={(e)=> this.handleInput(lastName,e)} value = { lastName } placeholder={'Last name'}/>
                     </div>
                     <br/>
-                    <TextInput  value ={ email } placeholder={'Mobile Number or email'}/>
-                    <TextInput  value = { password } placeholder={'New password'}/>
+                    <TextInput onChange={(e)=>this.handleInput(email,e)}  value ={ email } placeholder={'Mobile Number or email'}/>
+                    <TextInput onChange={(e)=>this.handleInput(password,e)} value = { password } placeholder={'New password'}/>
                     <br/>
                     <br/>
                     <BirthdayInput/>

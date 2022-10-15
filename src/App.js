@@ -9,12 +9,12 @@ class App extends React.Component {
 
   render() {
     return <SignUp
-        defaultValus={
+        defaultValues={
           {
-              firstName: 'aaa',
-              lastName: 'bbb',
-              password: 'ddd',
-              email: 'ccc'
+              firstName: '',
+              lastName: '',
+              password: '',
+              email: ''
             }
         }
         onSubmit={this.handleSubmit}
