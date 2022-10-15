@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.first_input{
+
+  justify-content: center;
+}
+
+
+
+
+.text{
+  margin-left: 25%;
+
+}
+
+.form{
+  border:  2px solid red;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 25%;
+}
+.first_input{
+  padding: 15px;
+  margin: 2px;
+}
+
+.birthdayForm{
+  padding: 15px;
+  margin: 2px;
+
+}
+.genderForm{
+  padding: 15px;
+  margin: 2px;
+}
+.buttome{
+  padding: 15px;
+  margin: 2px;
+
+}
