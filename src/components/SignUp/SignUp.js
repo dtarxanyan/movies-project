@@ -62,11 +62,11 @@ class SignUp extends Component {
                     <br/>
                     <div className={ 'gender' }>
                         <label htmlFor="female">Female</label>
-                        <input type="radio" id={ 'female' }/>
+                        <input type="radio" name={ 'gender' } id={ 'female' }/>
                         <label htmlFor="male">Male</label>
-                        <input type="radio" id={ 'male' }/>
+                        <input type="radio" name={ 'gender' } id={ 'male' }/>
                         <label htmlFor="custom">Custom</label>
-                        <input type="radio" id={ 'custom' }/>
+                        <input type="radio" name={ 'gender' } id={ 'custom' }/>
                     </div>
                     <br/>
                     <select name="pronoun" id="pronoun">
