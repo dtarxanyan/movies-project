@@ -26,7 +26,7 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={(e) => this.props.onSubmit(e, this.state)}>
+        <form onSubmit={(e) => this.props.onSubmit(e, this.state.values)}>
           <div className={'firstname-lastname'}>
             <TextInput
               onChange={(e) => this.handleInput('firstName', e)}
