@@ -17,8 +17,7 @@ class App extends React.Component {
               email: 'ccc'
             }
         }
-        onSubmit={this.handleSubmit}
-    />;
+        onSubmit={this.handleSubmit}/>;
   }
 }
 

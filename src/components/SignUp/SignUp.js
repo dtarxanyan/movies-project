@@ -21,7 +21,7 @@ class SignUp extends Component {
         }
     }
     handleInput=(name,value)=>{
-        this.setState({value:{
+        this.setState({values:{
             ...this.state.values,
                 [name]:value
         }})
@@ -29,7 +29,7 @@ class SignUp extends Component {
 
 
 
-    onSubmit =()=>{
+    onSubmit = ()=>{
         this.props.onSubmit(this.state.values)
     }
 
@@ -56,7 +56,7 @@ class SignUp extends Component {
                     <br/>
                     <GenderInput/>
                     <br/>
-                    <button onClick={this.onSubmit } type={'submit'}>Sign Up</button>
+                    <button onClick={this.onSubmit } type={'button'}>Sign Up</button>
                 </form>
             </div>
         );
