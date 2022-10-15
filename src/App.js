@@ -1,11 +1,11 @@
 import React from 'react';
-import CountryRegionDropdowns from "./components/CountryRegionDropdowns/CountryRegionDropdowns";
+import FormContainer from "./components/Form/FormContainer";
 
 
 class App extends React.Component {
     render() {
         return (
-            <CountryRegionDropdowns/>
+            <FormContainer/>
         )
     }
 }
