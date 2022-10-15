@@ -1,0 +1,40 @@
+.form{
+    position: absolute;
+    left: 31.25%;
+    top: 12.50%;
+    width: 37.5%;
+    border: 1px solid blue;
+    background: rgba(128, 128, 128, 0.123);
+    border-radius: 7px;
+}
+.top{
+    align-items: center;
+    text-align: center;
+    line-height: 10px;
+}
+.but{
+    background-color: #fff;
+    color: #000;
+    border:1px solid blue;
+    border-radius: 5px;
+    height: 25px;
+    margin: 5px 0;
+    margin-left: 1.5%;
+
+
+}
+#mobnumber{
+    width: 95%;
+}
+#password{
+    width: 95%;
+}
+.form-down-text{
+    font-size: 12px;
+}
+.sub{
+    text-align: center;
+}
+.down-form{
+    text-align: center;
+}
