@@ -96,6 +96,8 @@ class Form extends React.Component {
         <br />
         <br />
         <input type="text" placeholder="Gender" />
+        <br />
+        <br />
         <button type="submit">Sign up</button>
       </form>
     );
