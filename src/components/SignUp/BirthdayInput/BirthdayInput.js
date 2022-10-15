@@ -31,15 +31,15 @@ class BirthdayInput extends React.Component {
     render() {
         return (
             <div className={'birthdate'}>
-                <DropDown
+                <DropDown onChangeValue = {this.props.onChangeValue}
                     label={'Day'}
                     options={days.map((day) => ({value: day, name: day}))}
                 />
-                <DropDown
+                <DropDown onChangeValue = {this.props.onChangeValue}
                     label={'Month'}
                     options={months}
                 />
-                <DropDown
+                <DropDown onChangeValue = {this.props.onChangeValue}
                     label={'Year'}
                     options={years.map((year) => ({value: year, name: year}))}
                 />

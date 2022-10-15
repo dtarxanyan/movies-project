@@ -6,12 +6,15 @@ class TextInput extends React.Component {
         this.state = {
             value: props.value
         }
+        this.handleChange =this.handleChange.bind(this)
     }
 
     handleChange = (e) => {
+
+       this.props.onChangeValue(e.target.value,e.target.name)
         const value = e.target.value;
         this.setState({value});
-        this.props.onChange(value);
+        // this.props.onChange(value);
     }
 
     render() {
@@ -22,6 +25,7 @@ class TextInput extends React.Component {
                 <label htmlFor={'text-input'}>{label}</label>
                 <br/>
                 <input
+                    name={placeholder}
                     id={'text-input'}
                     type={'text'}
                     value={this.state.value}

@@ -13,7 +13,7 @@ class GenderInput extends React.Component {
                     <input type="radio" name={'gender'} id={'custom'}/>
                 </div>
                 <br/>
-                <select name="pronoun" id="pronoun">
+                <select onChange={(e)=>this.props.onChangeValue(e.target.value,e.target.name)} name="pronoun" id="pronoun">
                     <option selected value="">She: 'Wish her a happy birthday'</option>
                     <option value="">He: 'Wish him a happy birthday'</option>
                     <option value="">They: 'Wish them a happy birthday'</option>
