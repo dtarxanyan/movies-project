@@ -15,7 +15,7 @@ code {
 .container {
   width: 450px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 20px auto;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
