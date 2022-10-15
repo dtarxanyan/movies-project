@@ -1,36 +1,34 @@
-import React from 'react';
+import React from "react";
 
 class TextInput extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: props.value
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      valueInput: this.props.defaultValue,
+    };
+  }
 
-    handleChange = (e) => {
-        const value = e.target.value;
-        this.setState({value});
-        this.props.onChange(value);
-    }
+  componentDidUpdate() {
+    this.props.onChange(this.state.valueInput);
+  }
 
-    render() {
-        const {label, placeholder, onChange} = this.props;
+  render() {
+    const { label, placeholder } = this.props;
 
-        return (
-            <div className={'text-input'}>
-                <label htmlFor={'text-input'}>{label}</label>
-                <br/>
-                <input
-                    id={'text-input'}
-                    type={'text'}
-                    value={this.state.value}
-                    placeholder={placeholder}
-                    onChange={this.handleChange}
-                />
-            </div>
-        )
-    }
+    return (
+      <div className={"text-input"}>
+        <label htmlFor={"text-input"}>{label}</label>
+        <br />
+        <input
+          id={"text-input"}
+          type={"text"}
+          value={this.state.valueInput}
+          placeholder={placeholder}
+          onChange={(e) => this.setState({ valueInput: e.target.value })}
+        />
+      </div>
+    );
+  }
 }
 
 export default TextInput;
