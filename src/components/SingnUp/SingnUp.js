@@ -1,4 +1,5 @@
 import React from "react";
+import Gender from "../Gender/Gender";
 import OptionList from "../OptionList/OptionList";
 import SingnUpList from "../SingnUpList/SingnUpList";
 
@@ -10,7 +11,8 @@ class SingnUp extends React.Component {
         <SingnUpList placeholder={"Last name"} />
         <SingnUpList placeholder={"Mobil number or email"} />
         <SingnUpList placeholder={"New passvord"} />
-        <OptionList Dey={"14"}/>
+        <OptionList />
+        <Gender/>
       </form>
     );
   }
