@@ -1,13 +1,10 @@
-import React from 'react';
-import CountryRegionDropdowns from "./components/CountryRegionDropdowns/CountryRegionDropdowns";
-
+import React from "react";
+import SignUp from "./components/SignUp";
 
 class App extends React.Component {
-    render() {
-        return (
-            <CountryRegionDropdowns/>
-        )
-    }
+  render() {
+    return <SignUp />;
+  }
 }
 
 export default App;
