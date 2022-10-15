@@ -78,6 +78,8 @@ class SignUp extends Component {
                     <br/>
                     <br/>
                     <input type="text" placeholder={ 'Gender (optional)' }/>
+                    <br/>
+                    <button type={ 'submit' }>Sign Up</button>
                 </form>
             </div>
         );
