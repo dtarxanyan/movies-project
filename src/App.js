@@ -9,7 +9,7 @@ class App extends React.Component {
 
   render() {
     return <SignUp
-        defaultValus={
+        defaultValues={
           {
               firstName: 'aaa',
               lastName: 'bbb',

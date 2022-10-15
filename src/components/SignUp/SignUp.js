@@ -10,7 +10,7 @@ class SignUp extends Component {
 
          const { defaultValues}  = this.props
         this.state = {
-                value:{
+                values:{
                     firstName : '',
                     lastName: '',
                     password : '',
@@ -41,19 +41,19 @@ class SignUp extends Component {
 
 
     render() {
-        const {firstName,lastName,password,email,handleInput} = this.state
+        const {firstName,lastName,password,email,handleInput} = this.state.values
 
         return (
             <div>
 
                 <form action="">
                     <div className={'firstname-lastname'}>
-                        <TextInput onChange={(e)=>handleInput(e.target.value)}  value={ firstName } placeholder={'First name'}/>
-                        <TextInput  onChange={(e)=>handleInput(e.target.value)} value = { lastName } placeholder={'Last name'}/>
+                        <TextInput onChange={(e)=>this.handleInput(firstName,e)}  value={ firstName } placeholder={'First name'}/>
+                        <TextInput  onChange={(e)=>handleInput(lastName,e)} value = { lastName } placeholder={'Last name'}/>
                     </div>
                     <br/>
-                    <TextInput onChange={(e)=>handleInput(e.target.value)}  value ={ email } placeholder={'Mobile Number or email'}/>
-                    <TextInput onChange={(e)=>handleInput(e.target.value)} value = { password } placeholder={'New password'}/>
+                    <TextInput onChange={(e)=>handleInput(email,e)}  value ={ email } placeholder={'Mobile Number or email'}/>
+                    <TextInput onChange={(e)=>handleInput(password,e)} value = { password } placeholder={'New password'}/>
                     <br/>
                     <br/>
                     <BirthdayInput/>
