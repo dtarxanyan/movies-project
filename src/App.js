@@ -3,7 +3,8 @@ import SignUp from "./components/SignUp/SignUp";
 
 class App extends React.Component {
 
-  handleSubmit(values) {
+  handleSubmit(e,values) {
+    e.preventDefault()
     console.log(values);
   }
   
@@ -12,7 +13,7 @@ class App extends React.Component {
       defaultValues={{
         firstName:'Alice',
         lastName: 'Wonderland',
-        number: '116',
+        mobile: '116',
         password: '365',
         onSubmit: this.handleSubmit
       }}
