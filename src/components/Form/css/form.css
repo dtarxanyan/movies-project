@@ -1,0 +1,69 @@
+p {
+	margin: 0;
+}
+h1 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+select {
+	width: 180px;
+}
+.inputs {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.birth {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.label {
+	width: 100%;
+}
+.gender {
+	display: flex;
+	flex-wrap: wrap;
+}
+#customGender {
+	width: 100%;
+}
+#optionalGender {
+	width: 100%;
+}
+.info > p {
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+.submitBtn {
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	color: white;
+	font-size: 16px;
+	border-radius: 10px;
+	border: none;
+}
+.submitBtnContainer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
