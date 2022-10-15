@@ -1,11 +1,11 @@
 import React from 'react';
-import CountryRegionDropdowns from "./components/CountryRegionDropdowns/CountryRegionDropdowns";
+import SingnUp from './components/SingnUp/SingnUp';
 
 
 class App extends React.Component {
     render() {
         return (
-            <CountryRegionDropdowns/>
+           <SingnUp/>
         )
     }
 }

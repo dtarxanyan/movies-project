@@ -1,0 +1,5 @@
+[
+    {"id":1, "countries": "USA","regions":"Texas"},
+    {"id":2, "countries": "Russian","regions":"Maskva"},
+    {"id":3, "countries": "Armenian","regions":"Artashat"}
+]
