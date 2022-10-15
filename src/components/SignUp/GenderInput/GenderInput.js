@@ -14,7 +14,7 @@ class GenderInput extends React.Component {
                 </div>
                 <br/>
                 <select name="pronoun" id="pronoun">
-                    <option selected value="">She: 'Wish her a happy birthday'</option>
+                    <option  value="">She: 'Wish her a happy birthday'</option>
                     <option value="">He: 'Wish him a happy birthday'</option>
                     <option value="">They: 'Wish them a happy birthday'</option>
                     <option value=""></option>

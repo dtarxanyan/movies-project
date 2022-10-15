@@ -16,7 +16,6 @@ class TextInput extends React.Component {
 
     render() {
         const {label, placeholder, onChange} = this.props;
-
         return (
             <div className={'text-input'}>
                 <label htmlFor={'text-input'}>{label}</label>
