@@ -18,12 +18,6 @@ class SignUp extends Component {
                 ...defaultValues,
             }
         }
-
-
-    }
-
-    onSubmit = () => {
-        this.props.onSubmit(this.state.values)
     }
 
     handleInput = (name, value) => {
@@ -35,6 +29,7 @@ class SignUp extends Component {
 
     render() {
         const { firstName, lastName, mobileNumber, _password } = this.state.values;
+        const { onSubmit } = this.props;
 
         return (
             <div>
@@ -52,7 +47,7 @@ class SignUp extends Component {
                     <br/>
                     <GenderInput/>
                     <br/>
-                    <button onClick = { this.onSubmit } type={'button'}>Sign Up</button>
+                    <button onClick = { () => onSubmit(this.state.values) } type={'button'}>Sign Up</button>
                 </form>
             </div>
         );
