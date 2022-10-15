@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+.formContainer{
+  margin-left: 40%;
+  width: 450px;
+  height: 600px;
+  border: 2px solid black;
+
+  font-size: 24px;
+}
+
 
 .formContainer input {
   margin: 5px;
@@ -26,4 +35,13 @@ code {
 }
 .form-radio {
   margin: 5px;
+}
+.form-button-sign-in{
+  color: white;
+  font-size: 25px;
+  margin-left: 40%;
+  background-color: #21d00c;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
 }

@@ -51,6 +51,8 @@ class FormContainer extends Component {
                     <p>Your pronoun is visible to everyone</p>
                     <input type="text" placeholder={"Gender (optional)"}/>
 
+                    <br/>
+                    <button className={"form-button-sign-in"}> Sign Up</button>
                 </form>
             </div>
         );
