@@ -1,13 +1,101 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  width: 450px;
+  height: auto;
+  border: 1px solid black;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.headerInput {
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerInput > input {
+  padding: 8px;
+}
+
+.top {
+  text-align: center;
+}
+
+.formSecond {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.formSecond > input {
+  padding: 8px;
+  width: 86%;
+}
+
+.birthDay {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.birthDay > select {
+  padding: 8px;
+  width: 107px;
+}
+
+.birthdaySpan {
+  font-size: 12px;
+  position: absolute;
+  top: 255px;
+  left: 21px;
+}
+
+.gender {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.gender > label {
+  border: 1px solid gray;
+  padding: 8px;
+  width: 90px;
+}
+
+.genderSpan {
+  top: 310px;
+  left: 21px;
+  position: absolute;
+  font-size: 12px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.submit > button {
+  padding: 10px;
+  border: none;
+  background-color: rgb(0, 164, 0);
+  color: white;
+  border-radius: 8px;
+  width: 100px;
 }

@@ -1,13 +1,10 @@
-import React from 'react';
-import CountryRegionDropdowns from "./components/CountryRegionDropdowns/CountryRegionDropdowns";
-
+import React from "react";
+import FormField from "./components/FormField";
 
 class App extends React.Component {
-    render() {
-        return (
-            <CountryRegionDropdowns/>
-        )
-    }
+  render() {
+    return <FormField />;
+  }
 }
 
 export default App;
