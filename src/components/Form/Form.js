@@ -92,9 +92,7 @@ class Form extends React.Component {
         </select>
         <br />
         <br />
-        <select disabled>
-          <option value="gender">gender</option>
-        </select>
+        <input type="text" placeholder="Gender" />
       </form>
     );
   }
