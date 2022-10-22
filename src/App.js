@@ -10,9 +10,8 @@ function App() {
         <div>
             <Layout>
                 <Index
-                height={'height'}
-                white={'white'}
-                length={'length'}
+                height={200}
+                white={200}
                 />
             </Layout>
         </div>

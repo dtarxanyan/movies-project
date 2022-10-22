@@ -6,9 +6,9 @@ const [volume,setVolume] = useState(0)
     const [height,setHeight] =useState(0)
     const [area,setArea]= useState(0)
 
-useEffect(()=>{
-    setArea(width  * length)
-},[height])
+    useEffect(()=>{
+        setArea(width  * length)
+    },[height])
 
     useEffect(()=>{
         setVolume(width  * length)
@@ -25,31 +25,31 @@ useEffect(()=>{
 
     return (
         <div>
-            <label id ={'Width'}></label>
-            <input
-                id ={'Width'}
-                type={"number"}
-                defaultValue={'width'}
-            />
-
-
-            <label id ={'Height'}></label>
-            <input
-                onChange={handleInput}
-                id ={'Height'}
-                type={"number"}
-                defaultValue={'Height'}
-            />
-        <span> Area: {width * height}</span>
-
-
-            <label id ={'Length'}></label>
-            <input
-                defaultValue={'Length'}
-                id ={'Length'}
-                type={"number"}
-            />
-        <span>Volume: {volume}</span>
+            <div>
+                <label id ={'Width'}></label>
+                <input
+                    id ={'Width'}
+                    type={"number"}
+                    defaultValue={'width'}
+                />
+                <label id ={'Height'}></label>
+                <input
+                    id ={'Height'}
+                    type={"number"}
+                    defaultValue={'Height'}
+                />
+                <span> Area: {area}</span>
+            </div>
+            <div>
+                <label id ={'Length'}></label>
+                <input
+                    onChange={handleInput}
+                    defaultValue={'Length'}
+                    id ={'Length'}
+                    type={"number"}
+                />
+                <span>Volume: {volume}</span>
+            </div>
         </div >
     );
 }
