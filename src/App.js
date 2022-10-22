@@ -8,7 +8,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <InputField area={12} />;
+    return <InputField area={15} />;
   }
 }
 

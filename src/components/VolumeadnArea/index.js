@@ -10,7 +10,7 @@ const InputField = ({ area }) => {
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
         />
-        <p>Height is {volume * 12}</p>
+        <p>Volume is {volume * area}</p>
       </form>
     </>
   );
