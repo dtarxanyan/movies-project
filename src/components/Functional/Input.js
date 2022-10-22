@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Input(props) {
-  const { label, placeholder, onChange, id, name, className, type, value } = props;
+  const { label, placeholder, onChange, id, name, className, type } = props;
+
+  const [value, setValue] = useState(props.value);
+
+  const handleChange = (e) => {
+    const targetValue = e.target.value;
+    setValue({ value: targetValue });
+    onChange(name, value);
+  };
 
   return (
     <div className={'text-input'}>
@@ -13,9 +21,9 @@ function Input(props) {
         name={name}
         id={id}
         type={type}
-        value={value}
+        value={value2}
         placeholder={placeholder}
-        onChange={() => onChange(e, name)}
+        onChange={() => handleChange(e)}
       />
     </div>
   );
