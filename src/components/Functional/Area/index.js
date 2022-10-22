@@ -6,19 +6,14 @@ const [volume,setVolume] = useState(0)
     const [height,setHeight] =useState(0)
     const [area,setArea]= useState(0)
 
-    useEffect(()=>{
-        setArea(width  * length)
-    },[height])
 
     useEffect(()=>{
         setVolume(width  * length)
     },[height])
 
-    useEffect((e)=>{
-        setHeight(e.target.value)
-    },[])
 
-    const handleInput =(e)=>{
+
+    const handleInput = (e) => {
     setHeight(e.target.value)
     }
 
