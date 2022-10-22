@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./components/Functional/Layout/Layout";
-import RegistrationPage from "./components/Functional/RegistrationPage/RegistrationPage";
+import Calculate from "./components/calculate";
 
 class App extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class App extends React.Component {
     render() {
         return (
             <Layout>
-                <RegistrationPage/>
+            <Calculate/>
             </Layout>
         );
     }
