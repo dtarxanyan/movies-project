@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Input(props) {
-  const [value, setValue] = useState(props.value);
-  const { label, placeholder, onChange, id, name, className, type } = props;
+  const { label, placeholder, onChange, id, name, className, type, value } = props;
 
-  const handleChange = (e) => {
-    const targetValue = e.target.value;
-    setValue(targetValue);
-    onChange(props.name, value);
-  };
   return (
     <div className={'text-input'}>
       <label htmlFor={id}>{label} : </label>
 
       <input
         className={className}
+        label={label}
         name={name}
         id={id}
         type={type}
-        value={props.value}
+        value={value}
         placeholder={placeholder}
-        onChange={() => handleChange()}
+        onChange={() => onChange(e, name)}
       />
     </div>
   );
