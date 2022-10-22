@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Calc area={10} />
+        <Calc area={15} />
       </>
     );
   }
