@@ -3,9 +3,15 @@ import React, {useState, useEffect} from 'react';
 const CalculateVolume = ({width, length}) => {
     const [volume, setVolume] = useState(0)
     const [height, setHeight] = useState(0)
+    const [area, setArea] = useState(0)
 
     useEffect(() => {
-        setVolume(prev => width * height * length)
+        setArea(width * length)
+    }, []);
+
+
+    useEffect(() => {
+        setVolume(prev => area * height)
     }, [height]);
 
     const handleInput = (e) => {
@@ -19,7 +25,7 @@ const CalculateVolume = ({width, length}) => {
                 <input id={'width'} type="number" defaultValue={width}/>
                 <label htmlFor="length">Length</label>
                 <input id={'length'} type="number" defaultValue={length}/>
-                <span>Area: {width * length}</span>
+                <span>Area: {area}</span>
             </div>
             <div>
                 <label htmlFor="height">Height</label>
