@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App disableAllInputs={false} allInputsColor={'blue'} />
+    <App disableAllInputs={false} allInputsColor={'red'} />
   </React.StrictMode>,
 );
 
