@@ -6,7 +6,6 @@ const CalcVolume = (props) => {
     const [volume, setVolume] = useState(0);
     const [height, setHeight] = useState(0)
 
-
     useEffect(() => {
         setVolume(prev => area * height)
     }, [area])
