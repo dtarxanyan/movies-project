@@ -50,3 +50,18 @@ code {
   font-weight: bold;
   cursor: pointer;
 }
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 20px;
+}
+
+.inputBox input {
+  padding: 5px;
+}
+
+.btnDIV button {
+  padding: 5px;
+}
