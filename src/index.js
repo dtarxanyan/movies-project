@@ -11,7 +11,7 @@ root.render(
     <React.StrictMode>
 
             <App
-                disableAllinputs={true}
+                disableAllinputs={false}
                 allInputsColor={"red"}
             />
 
