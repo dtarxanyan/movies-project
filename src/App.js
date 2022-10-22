@@ -6,10 +6,6 @@ import Input from "./components/Functional/Input/Input";
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      value: 'value'
-    }
   }
 
   render() {
