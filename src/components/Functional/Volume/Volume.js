@@ -7,7 +7,7 @@ export default function Volume(props) {
     
     useEffect(() => {
         setVolume(width * height * length)
-    },[height])
+    })
 
     const changeHeight = (e) => {
         setHeight(+e)
