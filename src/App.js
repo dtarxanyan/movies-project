@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "./components/Form";
 import TextInput from "./components/TextInput/TextInput";
+import TextInputF from "./components/Functional/TextInputF/TextInputF";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -25,7 +27,7 @@ class App extends React.Component {
           const { setValue, values } = form;
           return (
             <div className="container">
-              <TextInput
+              <TextInputF
                 label={"Name"}
                 name={"name"}
                 value={values.name}
@@ -33,14 +35,14 @@ class App extends React.Component {
                 placeholder="Write your name"
               />
 
-              <TextInput
+              <TextInputF
                 label={"Email"}
                 name={"email"}
                 value={values.email}
                 onChange={setValue}
               />
 
-              <TextInput
+              <TextInputF
                 label={"Password"}
                 name={"password"}
                 value={values.password}
