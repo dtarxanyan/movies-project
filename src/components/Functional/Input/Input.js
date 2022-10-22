@@ -5,7 +5,7 @@ const Input = ({id, className, type, label, placeholder, name, value, onChange})
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
-        onChange(name, inputValue)
+        onChange(name, e.target.value)
     }
 
     return (
