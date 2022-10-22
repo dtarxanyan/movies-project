@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 const RegistrationPage = ({ disableAllInputs, color }) => {
-  const [data, setData] = useState("red");
-  const handleChange = (e) => {
-    setData(e.target.value);
-  };
+
   return (
     <div>
       <h2>Registration Page</h2>
