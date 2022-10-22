@@ -15,10 +15,14 @@ class App extends React.Component {
   render() {
     return (
       <Input 
+          className = "class"
+          type = "text"
+          name = "name"
           label = "Test Lable"
           placeholder = "test placeholder"
           id = "functionalInput" 
           defaultValue = "Test value"
+          onChange = {() => console.log(10)}
       ></Input>
     );
 }
