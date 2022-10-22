@@ -1,7 +1,6 @@
 import React from "react";
 import Form from "./components/Form";
-import TextInput from "./components/TextInput/TextInput";
-
+import TextInput from "./components/functional-component/input";
 class App extends React.Component {
   constructor(props) {
     super(props);
