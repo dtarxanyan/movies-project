@@ -1,11 +1,17 @@
 import React from "react";
 
-const RegistrationPage = () => {
+const RegistrationPage = ({allInputsColor,disableAllInputs}) => {
      return (
         <div>
             <h2>Registration Page</h2>
             <div>
-                Registration page contents Here
+                <label htmlFor={'text'}></label>
+                <input
+                 disabled={ disableAllInputs}
+                 id = { 'text' }
+                 style={{color : allInputsColor}}
+                 type={"text"}
+                />
             </div>
         </div>
     )
