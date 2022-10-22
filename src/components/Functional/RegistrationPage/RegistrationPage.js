@@ -1,14 +1,20 @@
-import React from "react";
+import React from 'react';
 
-const RegistrationPage = () => {
-     return (
-        <div>
-            <h2>Registration Page</h2>
-            <div>
-                Registration page contents Here
-            </div>
-        </div>
-    )
-}
+const RegistrationPage = (props) => {
+  return (
+    <div>
+      <h2>Registration Page</h2>
+      <div>
+        <form>
+          <input
+            disabled={props.disableAllInputs}
+            style={{ color: props.allInputsColor }}
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default RegistrationPage;
