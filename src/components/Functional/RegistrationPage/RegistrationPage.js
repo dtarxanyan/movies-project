@@ -1,11 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 
-const RegistrationPage = () => {
+const RegistrationPage = ({disableAllinputs, allInputsColor}) => {
+
+    
+
+
      return (
         <div>
             <h2>Registration Page</h2>
             <div>
-                Registration page contents Here
+                <form  action="">
+                    <input
+
+                        type="text"
+                        style={{color: allInputsColor}}
+                        disabled={disableAllinputs}
+                        />
+
+
+                </form 
+                    >
             </div>
         </div>
     )
