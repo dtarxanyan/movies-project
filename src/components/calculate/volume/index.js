@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
 const Volume = ({count}) => {
-    const [countValue, setCountValue] = useState(0)
+    const [volume, setVolume] = useState(0)
 
 
     function handleInputValue(e) {
         const value = e.target.value
-        setCountValue(+value + countValue)
+        setVolume(+value + volume)
     }
 
 
@@ -17,7 +17,7 @@ const Volume = ({count}) => {
             />
 
             <div>
-                total : {countValue * count}
+                total : {volume * count}
             </div>
         </div>
     );
