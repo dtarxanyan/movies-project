@@ -1,32 +1,32 @@
-import React, {useState} from "react";
-import Input from "../Input/Input";
+import React, { useEffect, useState } from 'react';
+import Input from '../Input/Input';
 
 const CalcVolume = (props) => {
-    const {area} = props;
-    const [volume, setVolume] = useState(0);
+  const { area } = props;
+  const [volume, setVolume] = useState(0);
+  const [heigth, setHeigth] = useState(0);
 
-    const calcVolume = (area, height) => {
-        return area * height;
-    };
+  const calcVolume = (area, height) => {
+    return area * height;
+  };
 
-    const onChange = (height) => {
-        const vol = calcVolume(area, height);
-        setVolume(vol);
-    }
+  useEffect(() => {
+    setVolume((prev) => area * heigth);
+  }, [area]);
 
-    return (
-        <>
-            <Input
-                type={'number'}
-                label={'Height'}
-                onChange={(name, value) => onChange(value || 0)}
-            />
+  const onChange = (height) => {
+    const vol = calcVolume(area, height);
+    setVolume(vol);
+    setHeigth(height);
+  };
 
-            <p>
-                Volume: {volume}
-            </p>
-        </>
-    )
-}
+  return (
+    <>
+      <Input type={'number'} label={'Height'} onChange={(name, value) => onChange(value || 0)} />
+
+      <p>Volume: {volume}</p>
+    </>
+  );
+};
 
 export default CalcVolume;
