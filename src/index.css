@@ -50,3 +50,13 @@ code {
   font-weight: bold;
   cursor: pointer;
 }
+
+.form {
+  padding: 10px;
+  margin-bottom: 35px;
+}
+
+.form input {
+  padding: 5px;
+  margin: 20px;
+}
