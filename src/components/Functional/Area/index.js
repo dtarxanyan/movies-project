@@ -10,7 +10,7 @@ function Index() {
 
     useEffect(() => {
         setArea(length * width)
-    }, [])
+    }, [width,length])
 
 
     const lengthInput = (e) => {
