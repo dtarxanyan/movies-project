@@ -10,7 +10,8 @@ class App extends React.Component {
     render() {
         return (
             <Layout>
-                <RegistrationPage/>
+                
+                <RegistrationPage disabled={this.props.disableAllInputs} colors={this.props.allInputesColor}/>
             </Layout>
         );
     }

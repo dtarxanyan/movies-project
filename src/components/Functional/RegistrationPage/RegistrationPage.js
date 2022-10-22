@@ -1,11 +1,11 @@
 import React from "react";
 
-const RegistrationPage = () => {
+const RegistrationPage = ({colors,disabled}) => {
      return (
         <div>
             <h2>Registration Page</h2>
             <div>
-                Registration page contents Here
+              <input type='text' style={{color:colors}} disabled={disabled} />
             </div>
         </div>
     )
