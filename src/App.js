@@ -22,6 +22,7 @@ class App extends React.Component {
           placeholder="Width"
         />
         <input
+        
           type="text"
           onChange={(e) => this.setState({ length: e.target.value })}
           placeholder="length"
