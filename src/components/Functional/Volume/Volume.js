@@ -2,19 +2,19 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 export default function Volume(props) {
+    const {area} = props
+
     const [volume, setVolume] = useState(null)
     const [height, setHeight] = useState(null)
     
     useEffect(() => {
-        setVolume(width * height * length)
-    })
+        setVolume(area * height)
+    },[area, height])
 
     const changeHeight = (e) => {
         setHeight(+e)
     }
 
-
-    const {width, length} = props
   return (
     <div className='wrapper'>
         <input type="text" placeholder = "Enter a height" onChange={(e) => changeHeight(e.target.value)}></input>

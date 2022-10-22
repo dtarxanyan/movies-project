@@ -20,7 +20,7 @@ export default function Area() {
         <div className='areaResult'>
             <span className='calculatedArea'>{width && length ? width * length : null}</span>
         </div>
-        <Volume width = {width} length = {length}></Volume>
+        <Volume area = {width * length}></Volume>
     </div>
   )
 }
