@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./components/Form";
+import Input from "./components/functional/Input";
 import TextInput from "./components/TextInput/TextInput";
 
 class App extends React.Component {
@@ -13,49 +14,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <Form
-        onSubmit={this.handleSubmit}
-        defaultValues={{
-          name: "Tigran",
-          email: "Tigran@gmail.com",
-          password: "123456",
-        }}
-      >
-        {(form) => {
-          const { setValue, values } = form;
-          return (
-            <div className="container">
-              <TextInput
-                label={"Name"}
-                name={"name"}
-                value={values.name}
-                onChange={setValue}
-                placeholder="Write your name"
-              />
-
-              <TextInput
-                label={"Email"}
-                name={"email"}
-                value={values.email}
-                onChange={setValue}
-              />
-
-              <TextInput
-                label={"Password"}
-                name={"password"}
-                value={values.password}
-                onChange={setValue}
-              />
-
-              <button type={"submit"} className="subBTN">
-                Submit Form
-              </button>
-            </div>
-          );
-        }}
-      </Form>
+      <Input 
+          label = "Test Lable"
+          placeholder = "test placeholder"
+          id = "functionalInput" 
+          defaultValue = "Test value"
+      ></Input>
     );
-  }
+}
 }
 
 export default App;
