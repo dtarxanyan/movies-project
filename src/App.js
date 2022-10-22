@@ -9,13 +9,11 @@ function App() {
     return (
         <div>
             <Layout>
-                <Index
-                height={200}
-                white={200}
-                />
+         <Index/>
             </Layout>
         </div>
     );
 }
 
 export default App;
+

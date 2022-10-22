@@ -1,51 +1,48 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
+import CatcVolum from "../CatcVolum";
 
-function Index({width,length}) {
+function Index() {
 
-const [volume,setVolume] = useState(0)
-    const [height,setHeight] =useState(0)
-    const [area,setArea]= useState(0)
-
-
-    useEffect(()=>{
-        setVolume(area  * length)
-    },[height])
+    const [area, setArea] = useState(0)
+    const [height, setHeight] = useState(0)
+    const [width, setWidth] = useState(0)
 
 
+    useEffect(() => {
+        setArea(height * width)
+    }, [])
 
-    const handleInput = (e) => {
-    setHeight(e.target.value)
+
+    const heightInput = (e) => {
+        setHeight(e.target.value)
+    }
+    const widthInput = (e) => {
+        setWidth(e.target.value)
     }
 
 
     return (
         <div>
             <div>
-                <label id ={'Width'}></label>
+                <label> Width </label>
                 <input
-                    id ={'Width'}
                     type={"number"}
-                    defaultValue={'width'}
-                />
-                <label id ={'Height'}></label>
+                    onChange={widthInput}
+                /><br/>
+                <label> Height </label>
                 <input
-                    id ={'Height'}
                     type={"number"}
-                    defaultValue={'Height'}
-                />
-                <span> Area: {area}</span>
+                    onChange={heightInput}
+                /><br/>
             </div>
-            <div>
-                <label id ={'Length'}></label>
-                <input
-                    onChange={handleInput}
-                    defaultValue={'Length'}
-                    id ={'Length'}
-                    type={"number"}
-                />
-                <span>Volume: {volume}</span>
-            </div>
-        </div >
+            <span>Area: {area}</span>
+
+
+            <CatcVolum
+                area={area}
+            />
+
+        </div>
     );
 }
 
