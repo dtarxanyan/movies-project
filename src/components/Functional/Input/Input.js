@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Input = ({id, className, type, label, placeholder, name, value, onChange}) => {
+const Input = ({id, className, type, label, placeholder, name, value, onChange,color, disabled}) => {
     const [inputValue, setInputValue] = useState(`${value}`)
 
     const handleChange = (e) => {
@@ -12,6 +12,8 @@ const Input = ({id, className, type, label, placeholder, name, value, onChange})
         <div>
             <label htmlFor={id}>{label}</label>
             <input
+                style={{backgroundColor: color}}
+                disabled = {disabled ? true : false}
                 className={className}
                 id={id}
                 defaultValue={inputValue}

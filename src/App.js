@@ -10,7 +10,8 @@ class App extends React.Component {
     render() {
         return (
             <Layout>
-                <RegistrationPage/>
+                <RegistrationPage style = {this.props}/>
+                  
             </Layout>
         );
     }
