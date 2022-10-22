@@ -2,15 +2,15 @@ import React, {useEffect, useState} from 'react';
 
 function Calc({area}) {
     console.log(area)
-    const [length, setLength] = useState(0)
+    const [height, setHeight] = useState(0)
     const [volumes, setVolumes] = useState(0)
 
     useEffect(() => {
-        setVolumes(length * area)
-    }, [])
+        setVolumes(height * area)
+    }, [height])
 
     const lengthInput = (e) => {
-        setLength(e.target.value)
+        setHeight(e.target.value)
     }
 
     return (

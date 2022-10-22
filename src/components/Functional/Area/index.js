@@ -4,17 +4,17 @@ import CatcVolum from "../CatcVolum";
 function Index() {
 
     const [area, setArea] = useState(0)
-    const [height, setHeight] = useState(0)
+    const [length, setLength] = useState(0)
     const [width, setWidth] = useState(0)
 
 
     useEffect(() => {
-        setArea(height * width)
+        setArea(length * width)
     }, [])
 
 
-    const heightInput = (e) => {
-        setHeight(e.target.value)
+    const lengthInput = (e) => {
+        setLength(e.target.value)
     }
     const widthInput = (e) => {
         setWidth(e.target.value)
@@ -29,10 +29,10 @@ function Index() {
                     type={"number"}
                     onChange={widthInput}
                 /><br/>
-                <label> Height </label>
+                <label> length </label>
                 <input
                     type={"number"}
-                    onChange={heightInput}
+                    onChange={lengthInput}
                 /><br/>
             </div>
             <span>Area: {area}</span>
