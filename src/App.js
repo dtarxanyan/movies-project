@@ -2,23 +2,20 @@ import React from "react";
 import Layout from "./components/Functional/Layout/Layout";
 import RegistrationPage from "./components/Functional/RegistrationPage/RegistrationPage";
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
-    render() {
-        return (
+
+function App() {
+    return (
+        <div>
             <Layout>
                 <RegistrationPage
-                allInputsColor={'red'}
-                disableAllInputs ={ false}
-                type={'text'}
-
+                    allInputsColor={'green'}
+                    disableAllInputs ={ false}
+                    type={'text'}
                 />
             </Layout>
-        );
-    }
+        </div>
+    );
 }
 
 export default App;
