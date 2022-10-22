@@ -1,35 +1,29 @@
-import React from "react";
+import React, {useState}from 'react';
 
-class TextInput extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: props.value,
-    };
+
+function TextInput({id,className,label,onChange,type,placeholder,name}) {
+  const [inputValue,setInputValue]=useState()
+
+  const handleChange = (e)=>{
+    setInputValue( e.target.value)
+    onChange( name ,inputValue)
   }
 
-  handleChange = (e) => {
-    const value = e.target.value;
-    this.setState({ value });
-    this.props.onChange(this.props.name, value);
-  };
-
-  render() {
-    const { label, placeholder, onChange } = this.props;
     return (
-      <div className={"text-input"}>
-        <label htmlFor={"text-input"}>{label} : </label>
-
-        <input
-          id={"text-input"}
-          type={"text"}
-          value={this.state.value}
+        <div>
+          <label htmlFor={id}>{label}</label>
+          <input
+          id={id}
+          className={className}
+          defaultValue={inputValue}
+          onChange={handleChange}
+          type={type}
           placeholder={placeholder}
-          onChange={this.handleChange}
-        />
-      </div>
+          name={name}
+          />
+        </div>
+
     );
-  }
 }
 
 export default TextInput;
