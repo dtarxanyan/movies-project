@@ -7,10 +7,12 @@ class App extends React.Component {
         super(props);
     }
 
+
     render() {
+
         return (
             <Layout>
-                <RegistrationPage/>
+                <RegistrationPage {...this.props} />
             </Layout>
         );
     }

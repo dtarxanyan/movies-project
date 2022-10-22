@@ -1,11 +1,13 @@
 import React from "react";
+import Input from "../Input/Input";
+const RegistrationPage = (props) => {
 
-const RegistrationPage = () => {
+    console.log(props)
      return (
         <div>
             <h2>Registration Page</h2>
             <div>
-                Registration page contents Here
+               <Input  {...props}/>
             </div>
         </div>
     )
