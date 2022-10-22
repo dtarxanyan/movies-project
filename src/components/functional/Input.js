@@ -10,8 +10,8 @@ export default function Input(props) {
 
 	};
 	return (
-		<div className={"text-input"}>
-			<label htmlFor={"text-input"}>{props.label} : </label>
+		<div className={props.className}>
+			<label htmlFor={props.className}>{props.label} : </label>
 
 			<input
                 className={props.className}
