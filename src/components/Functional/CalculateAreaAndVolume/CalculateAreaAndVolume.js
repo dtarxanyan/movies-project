@@ -25,10 +25,8 @@ const CalculateAreaAndVolume = () => {
         }
     }
 
-
     return (
         <div>
-            <CalcVolume area = { area } />
             <div>
                 <label htmlFor="width">Width</label>
                 <input onChange={(e) => handleInputs('widthInput', e)} id={'width'} type="number" defaultValue={widthInput}/>
@@ -36,6 +34,8 @@ const CalculateAreaAndVolume = () => {
                 <input onChange={(e) => handleInputs('lengthInput', e)} id={'length'} type="number" defaultValue={lengthInput}/>
                 <span>Area: {area}</span>
             </div>
+            <br/>
+            <CalcVolume area = { area } />
         </div>
     );
 };
