@@ -5,17 +5,25 @@ import CalcVolume from "./components/calcVolume";
 
 class App extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
+        this.state={
+            width:0,
+            length:0
+        }
     }
 
     render() {
+        const{width,length}=this.state
         return (
-            // <Layout>
-            //     <RegistrationPage/>
-            // </Layout>
+             <Layout>
+                <input type='text' onChange={e=>this.setState({width:e.target.value})} placeholder="Width"/>
+                <input type='text' onChange={e=>this.setState({length:e.target.value})}  placeholder="length"/>
+                <h2>Area:{width*length}</h2>
+                <CalcVolume area={width*length} width={width} length={length}/>
+             </Layout>
 
             
-            <CalcVolume area={200}/>
+           
         );
     }
 }
