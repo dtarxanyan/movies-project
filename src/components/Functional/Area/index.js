@@ -8,7 +8,7 @@ const [volume,setVolume] = useState(0)
 
 
     useEffect(()=>{
-        setVolume(width  * length)
+        setVolume(area  * length)
     },[height])
 
 
