@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./components/Form";
 import TextInput from "./components/TextInput/TextInput";
+import Input from "./components/Functional/Input/Input";
 
 class App extends React.Component {
   constructor(props) {
@@ -40,12 +41,17 @@ class App extends React.Component {
                 onChange={setValue}
               />
 
-              <TextInput
-                label={"Password"}
-                name={"password"}
-                value={values.password}
-                onChange={setValue}
+              <Input
+                  id={'id'}
+                  className={'class-name'}
+                  type={'password'}
+                  label={'password'}
+                  placeholder={'Enter Password...'}
+                  name={'password'}
+                  value={values.password}
+                  onChange={setValue}
               />
+
 
               <button type={"submit"} className="subBTN">
                 Submit Form
