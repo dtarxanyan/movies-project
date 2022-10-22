@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Input(props) {
-  const { label, placeholder, onChange, id, name, className, type } = props;
+  const { label, placeholder, id, name, className, type } = props;
 
   const [value, setValue] = useState(props.value);
 
@@ -21,7 +21,7 @@ function Input(props) {
         name={name}
         id={id}
         type={type}
-        value={value2}
+        value={value}
         placeholder={placeholder}
         onChange={() => handleChange(e)}
       />
