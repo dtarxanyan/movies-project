@@ -4,6 +4,10 @@ import { useState } from "react";
 export default function Input(props) {
 	const [value, setValue] = useState(props.defaultValue);
 
+	const handleChange = (e) => {
+		console.log(e.target.value);
+		setValue(e.target.value);
+	};
 	return (
 		<div className={"text-input"}>
 			<label htmlFor={"text-input"}>{props.label} : </label>
@@ -13,7 +17,7 @@ export default function Input(props) {
 				type={"text"}
 				value={value}
 				placeholder={props.placeholder}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={(e) => handleChange(e)}
 			/>
 		</div>
 	);
