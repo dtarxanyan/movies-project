@@ -18,7 +18,7 @@ export default function Area() {
         <input type={"text"} placeholder = "Enter a width" onChange={changeWidth}></input>
         <input type={"text"} placeholder = "Enter a length" onChange={changeLength}></input>
         <div className='areaResult'>
-            <span className='calculatedArea'>{width && length ? width * length : 0}</span>
+            <span className='calculatedArea'>{width && length ? width * length : null}</span>
         </div>
         <Volume width = {width} length = {length}></Volume>
     </div>

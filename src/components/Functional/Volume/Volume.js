@@ -19,7 +19,7 @@ export default function Volume(props) {
     <div className='wrapper'>
         <input type="text" placeholder = "Enter a height" onChange={(e) => changeHeight(e.target.value)}></input>
         <div className='result'>
-            <span id='volumeResult'>{volume || 0}</span>
+            <span id='volumeResult'>{volume || null}</span>
         </div>
     </div>
   )
