@@ -50,3 +50,12 @@ code {
   font-weight: bold;
   cursor: pointer;
 }
+
+.subMenu {
+  display: none;
+}
+
+.menuItem {
+  font-size: 20px;
+  margin: 20px;
+}
