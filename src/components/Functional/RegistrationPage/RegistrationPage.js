@@ -8,15 +8,15 @@ const RegistrationPage = (props) => {
 			<div>
 				<form>
 					<Input
-                        disabled = {props.style.disabledAllInputs}
-                        color = {props.style.allInputsColor}
-						id="input"
-						className="class"
-						type="text"
-						label="label"
-						placeholder="Enter login"
-						name="input"
-						value=""
+						disabled = {props.style.disabledAllInputs}
+						color = {props.style.allInputsColor}
+						id = "input"
+						className = "class"
+						type = "text"
+						label = "label"
+						placeholder = "Enter login"
+						name = "input"
+						value = ""
 					/>
 				</form>
 			</div>
