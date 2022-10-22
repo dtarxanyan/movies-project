@@ -43,8 +43,8 @@ class App extends React.Component {
 
               <Input
                   id={"id"}
-                  className={"class-name"}
-                  type={"text"}
+                  className={"text-input"}
+                  type={"password"}
                   placeholder={"Enter Password"}
                   label={"Password"}
                   name={"password"}

@@ -5,16 +5,15 @@ const [inputValue,setInputValue] = useState(`${value}`)
 
     const handelChange=(e)=>{
         setInputValue(e.target.value)
-        onChange(name,inputValue)
+        onChange(name,e.target.value)
     }
 
 
     return(
-        <div>
+        <div className={className}>
             <label htmlFor={id}>{label}</label>
             <input type={type}
                    id={id}
-                   className={className}
                    placeholder={placeholder}
                    name={name}
                    defaultValue={inputValue}
