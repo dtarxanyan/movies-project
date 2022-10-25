@@ -10,9 +10,12 @@ const Layout = (props) => {
             <div className={'sidebar'}>
                 <Sidebar items={menuItems}/>
             </div>
+
+
             <div className={'page-content'}>
                 {props.children}
             </div>
+
         </div>
     )
 }
