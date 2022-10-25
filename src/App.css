@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+.icon{
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid red;
+  width: 24px;
+  color: red;
+  font-weight: bolder;
+  border-radius: 100px;
+  right: 35%;
+  cursor: pointer;
+  top: 15px;
+}
+.iconCheck{
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid rgb(118, 193, 7);
+  width: 24px;
+  color: rgb(118, 190, 10);
+  font-weight: bolder;
+  border-radius: 100px;
+  left: 35%;
+  cursor: pointer;
+  top: 15px;
+}
+.iconEdit{
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid rgb(19, 7, 193);
+  width: 24px;
+  color: rgb(19, 7, 193);
+  font-weight: bolder;
+  border-radius: 100px;
+  right: 30%;
+  cursor: pointer;
+  top: 15px;
+}
+.added{
+  border: 2px solid rgb(26, 95, 151);
+  width: 40%;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 5px 30%;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+.myTodos{
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 70, 70);
+  width: 50%;
+  left: 25%;
+  margin: 10px 0;
+  min-height: 300px;
+}
+.done{
+  text-decoration:line-through;
+}
