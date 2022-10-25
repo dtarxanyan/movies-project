@@ -1,51 +1,45 @@
-import React from "react";
-import Layout from "./components/Functional/Layout/Layout";
-import RegistrationPage from "./components/Functional/RegistrationPage/RegistrationPage";
-import CalculateAreaAndVolume from "./components/Functional/CalculateAreaAndVolume/CalculateAreaAndVolume";
+import React, {Component} from 'react'
 
-const menuItems = [
-    {
-        name: 'Առարկաներ',
-        items: [
-            {
-                name: 'Ֆիզիկա',
-            },
-            {
-                name: 'Մաթեմ',
-            },
-            {
-                name: 'Հայոց',
-            }
-        ]
-    },
-    {
-        name: 'Դասարաններ',
-        items: [
-            {
-                name: '10 Ա',
-            },
-            {
-                name: '9 Բ',
-            },
-            {
-                name: '11 Գ',
-            }
-        ]
-    }
-]
-
-class App extends React.Component {
-    constructor(props) {
-        super(props);
+class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            todos: [],
+            value: "",
+        };
     }
 
-    render() {
-        return (
-            <Layout menuItems={menuItems}>
-                <CalculateAreaAndVolume />
-            </Layout>
-        );
+    onChange = (e) => {
+        this.setState({ value: e.target.value })
+    };
+
+    addItem = () =>{
+        const obj = {
+            name: this.state.value
+        }
+       if(this.state.value !== "" ){
+        this.setState ({todos: this.state.todos.concat(obj)})
+        this.setState ({value: ""})
+       }
     }
+
+  render() {
+    const list = this.state.todos.map((todo) => (
+        <li>{todo.name}
+        <button>X</button>
+        </li>
+    ));
+
+    return (
+      <div className="App">
+       <input placeholder='task' value={this.state.value} onChange={this.onChange} />
+       <button onClick={this.addItem}>Add Item</button>
+       <ul classname="list">
+            {list}
+       </ul>
+      </div>
+    )
+  }
 }
 
 export default App;
