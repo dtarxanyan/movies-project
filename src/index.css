@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-back-school-pattern_52683-14352.jpg?w=2000");
+  background-size: cover;
 }
 
 code {
@@ -49,4 +51,50 @@ code {
   color: cadetblue;
   font-weight: bold;
   cursor: pointer;
+}
+
+.mainSubject {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 100vh;
+  background-color: hsla(223, 4%, 34%, 0.689);
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.containerSubjects {
+  color: white;
+}
+
+.subjects {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.subItems {
+  display: none;
+}
+
+.subjects > div {
+  background-color: rgb(11, 76, 69);
+  padding: 10px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.subItemsActive {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.subItemsActive div {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.subItemsActive div:hover {
+  color: cadetblue;
 }
