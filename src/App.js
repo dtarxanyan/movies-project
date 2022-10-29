@@ -1,51 +1,23 @@
-import React from "react";
-import Layout from "./components/Functional/Layout/Layout";
-import RegistrationPage from "./components/Functional/RegistrationPage/RegistrationPage";
-import CalculateAreaAndVolume from "./components/Functional/CalculateAreaAndVolume/CalculateAreaAndVolume";
+import SubjectAndClasses from './components/SubjectsAndClasses/SubjectAndClasses';
+import './App.css';
+import { useState } from 'react';
+import menuItems from './components/SubjectsAndClasses/menuItems';
 
-const menuItems = [
-    {
-        name: 'Առարկաներ',
-        items: [
-            {
-                name: 'Ֆիզիկա',
-            },
-            {
-                name: 'Մաթեմ',
-            },
-            {
-                name: 'Հայոց',
-            }
-        ]
-    },
-    {
-        name: 'Դասարաններ',
-        items: [
-            {
-                name: '10 Ա',
-            },
-            {
-                name: '9 Բ',
-            },
-            {
-                name: '11 Գ',
-            }
-        ]
-    }
-]
+function App() {
+  const [isActiveSubjects, setIsActiveSubjects] = useState(menuItems[0].isActive);
+  const [isActiveClasses, setIsActiveClasses] = useState(menuItems[1].isActive);
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <Layout menuItems={menuItems}>
-                <CalculateAreaAndVolume />
-            </Layout>
-        );
-    }
+  return (
+    <>
+      <SubjectAndClasses
+        menuItems={menuItems}
+        isActiveSubjects={isActiveSubjects}
+        setIsActiveSubjects={setIsActiveSubjects}
+        isActiveClasses={isActiveClasses}
+        setIsActiveClasses={setIsActiveClasses}
+      />
+    </>
+  );
 }
 
 export default App;
